@@ -1,0 +1,37 @@
+{
+    "name": "phalanx-php/site",
+    "description": "Phalanx framework project site — landing page and branding kit",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": "^8.4",
+        "phalanx-php/aegis": "dev-main",
+        "phalanx-php/stoa": "dev-main",
+        "phalanx-php/eidolon": "dev-main",
+        "symfony/runtime": "^7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Phalanx\\Site\\": "src/"
+        }
+    },
+    "repositories": [
+        { "type": "vcs", "url": "https://github.com/phalanx-php/phalanx-aegis" },
+        { "type": "vcs", "url": "https://github.com/phalanx-php/phalanx-stoa" },
+        { "type": "vcs", "url": "https://github.com/phalanx-php/phalanx-eidolon" },
+        { "type": "vcs", "url": "https://github.com/phalanx-php/phalanx-styx" }
+    ],
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "symfony/runtime": true
+        }
+    },
+    "extra": {
+        "runtime": {
+            "class": "Phalanx\\Stoa\\Runtime"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

@@ -1,0 +1,21 @@
+# Default deny: all hidden files/dirs and markdown
+.*
+*.md
+
+# Explicit includes
+!.gitignore
+!README.md
+
+# Dependencies
+/vendor/
+/frontend/node_modules/
+
+# Build artifacts
+/frontend/.tanstack/
+/public/dist/
+
+# Locks (regenerated on install)
+/frontend/bun.lock
+
+# Logs
+*.log

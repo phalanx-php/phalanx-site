@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --phx-crimson: #C62840;
+    --phx-crimson-deep: #891428;
+    --phx-bronze: #C9A55A;
+    --phx-bronze-light: #ECD48E;
+    --phx-bronze-dark: #A07828;
+    --phx-bg: #0A0A0A;
+    --phx-surface: #141414;
+    --phx-border: #1E1E1E;
+    --phx-text: #E8E8E8;
+    --phx-text-muted: #888888;
+  }
+
+  body {
+    margin: 0;
+    background: var(--phx-bg);
+    color: var(--phx-text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+}
