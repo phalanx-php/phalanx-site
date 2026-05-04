@@ -12,23 +12,24 @@ type Package = {
   category: string
 }
 
+const MONOREPO_URL = 'https://github.com/phalanx-php/phalanx'
+
 const PACKAGES: Package[] = [
-  { name: 'phalanx-aegis', desc: 'Core scope hierarchy, service container, cancellation tokens, and task primitives that power every Phalanx application.', category: 'Core' },
-  { name: 'phalanx-stoa', desc: 'Async HTTP server with type-safe routing, middleware, request validation, SSE, and OpenAPI generation.', category: 'Server' },
-  { name: 'phalanx-archon', desc: 'CLI application framework for building long-running console commands with argument parsing and output formatting.', category: 'Server' },
-  { name: 'phalanx-hermes', desc: 'WebSocket server and client with connection management, message framing, and room-based broadcasting.', category: 'Server' },
-  { name: 'phalanx-athena', desc: 'AI agent runtime with multi-provider support (Anthropic, OpenAI, Ollama), tool execution, and structured output streaming.', category: 'Intelligence' },
-  { name: 'phalanx-styx', desc: 'Reactive stream primitives — Emitter, Channel, and ScopedStream with backpressure control and composable operators.', category: 'Concurrency' },
-  { name: 'phalanx-hydra', desc: 'Worker process parallelism for CPU-bound work via child processes with mapParallel and inWorker.', category: 'Concurrency' },
-  { name: 'phalanx-theatron', desc: 'Async terminal UI with buffer diffing, region layout, reactive widgets, and keyboard input handling.', category: 'Interface' },
-  { name: 'phalanx-eidolon', desc: 'Frontend bridge with signal-based reactivity, envelope middleware, and server-client data flow.', category: 'Interface' },
-  { name: 'phalanx-postgres', desc: 'Non-blocking PostgreSQL client with connection pooling, prepared statements, and transaction support.', category: 'Data' },
-  { name: 'phalanx-redis', desc: 'Async Redis client with pub/sub, pipelining, and connection management for caching and message queues.', category: 'Data' },
-  { name: 'phalanx-grammata', desc: 'Managed async file I/O with bounded concurrency, streaming reads/writes, and directory operations.', category: 'Data' },
-  { name: 'phalanx-argos', desc: 'Network utilities for DNS resolution, TCP/UDP helpers, and connection diagnostics.', category: 'Infrastructure' },
-  { name: 'phalanx-enigma', desc: 'Async SSH client for remote command execution, SFTP file transfers, and tunnel management.', category: 'Infrastructure' },
-  { name: 'phalanx-cdp', desc: 'Chrome DevTools Protocol client for browser automation, page inspection, and runtime evaluation.', category: 'Infrastructure' },
-  { name: 'phalanx-skopos', desc: 'PHP-native dev server and file watcher powered by Bun. Orchestrates process management, watches for changes, and coordinates hot-reload across your stack.', category: 'Tooling' },
+  { name: 'phalanx-aegis', desc: 'Managed async runtime for PHP 8.4+ on OpenSwoole with scope, cancellation, service lifecycle, and concurrency primitives.', category: 'Core' },
+  { name: 'phalanx-stoa', desc: 'OpenSwoole-native HTTP runtime handling request/response translation, routing, middleware, validation, and lifecycle management.', category: 'Server' },
+  { name: 'phalanx-archon', desc: 'CLI application framework for supervised command workflows on the same managed runtime as your services.', category: 'Server' },
+  { name: 'phalanx-hermes', desc: 'WebSocket server and client support including handshake, framing, pub/sub patterns, and HTTP upgrade integration.', category: 'Server' },
+  { name: 'phalanx-athena', desc: 'AI agent runtime with provider adapters, tool execution, streaming output, structured responses, and multi-agent patterns.', category: 'Intelligence' },
+  { name: 'phalanx-styx', desc: 'Reactive stream primitives that convert push events into composable, pull-friendly pipelines for scoped async execution.', category: 'Concurrency' },
+  { name: 'phalanx-hydra', desc: 'Worker-process parallelism for CPU-heavy or isolated work while preserving parent-runtime task coordination.', category: 'Concurrency' },
+  { name: 'phalanx-eidolon', desc: 'Frontend bridge focused on typed route contracts, OpenAPI generation, Kubb integration, and signal-driven UI reactivity.', category: 'Interface' },
+  { name: 'phalanx-postgres', desc: 'Async PostgreSQL integration via amphp/postgres with pooled query and transaction workflows for runtime tasks.', category: 'Data' },
+  { name: 'phalanx-redis', desc: 'Async Redis integration via clue/redis-react with command and pub/sub patterns for runtime composition.', category: 'Data' },
+  { name: 'phalanx-grammata', desc: 'Async-aware filesystem operations including streaming read/write workflows with resource governance under concurrency.', category: 'Data' },
+  { name: 'phalanx-argos', desc: 'Network discovery and probing tasks including subnet scans, port checks, wake-on-LAN, and host/service inspection.', category: 'Infrastructure' },
+  { name: 'phalanx-enigma', desc: 'Non-blocking SSH command execution, file transfer, and tunnel orchestration as composable runtime tasks.', category: 'Infrastructure' },
+  { name: 'phalanx-skopos', desc: 'Development server orchestrator that coordinates process startup, output multiplexing, and file-watch driven workflows.', category: 'Tooling' },
+  { name: 'phalanx-phpstan', desc: 'PHPStan safety rules enforcing concurrency and runtime invariants for static analysis across Phalanx code.', category: 'Tooling' },
 ]
 
 const CATEGORY_ORDER = ['Core', 'Server', 'Concurrency', 'Intelligence', 'Data', 'Interface', 'Infrastructure', 'Tooling']
@@ -74,7 +75,7 @@ function LandingPage() {
         </h1>
         <p className="max-w-lg text-center text-sm leading-relaxed text-phx-text-muted">
           Open-source async coordination framework for PHP 8.4+.
-          Expression-based concurrency built on ReactPHP — these are the libraries.
+          Managed runtime primitives and libraries for servers, agents, streams, and infrastructure.
         </p>
 
         <div className="mt-4 flex items-center gap-4 text-xs text-phx-text-muted">
@@ -109,7 +110,7 @@ function LandingPage() {
       <div className="mt-8 w-full max-w-4xl space-y-8">
         {!query && (
           <a
-            href="https://github.com/phalanx-php/phalanx-skopos"
+            href={`${MONOREPO_URL}/tree/main/packages/phalanx-skopos`}
             target="_blank"
             rel="noopener noreferrer"
             className="group flex gap-5 rounded-lg border border-phx-crimson/20 bg-gradient-to-r from-phx-surface to-phx-crimson/[0.04] px-6 py-5 transition-colors hover:border-phx-crimson/40"
@@ -139,7 +140,7 @@ function LandingPage() {
               {packages.map(pkg => (
                 <a
                   key={pkg.name}
-                  href={`https://github.com/phalanx-php/${pkg.name}`}
+                  href={`${MONOREPO_URL}/tree/main/packages/${pkg.name}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex flex-col gap-2 rounded-lg border border-phx-border bg-phx-surface px-5 py-4 transition-colors hover:border-phx-crimson/40"
