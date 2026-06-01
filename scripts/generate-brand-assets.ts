@@ -249,6 +249,12 @@ async function distributeToMonorepo(writes: Map<string, Buffer>) {
   const packagesDir = path.join(monorepoDir, 'packages')
   const bannerSvg = await readFile(path.join(monorepoDir, 'assets', 'banner.svg'))
 
+  try {
+    await stat(packagesDir)
+  } catch {
+    return
+  }
+
   const packages = await import('node:fs/promises').then(fs => fs.readdir(packagesDir))
   for (const pkg of packages) {
     const brandDir = path.join(packagesDir, pkg, 'brand')

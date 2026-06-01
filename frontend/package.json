@@ -7,8 +7,8 @@
     "dev": "vite --port=3002",
     "build": "vite build",
     "typecheck": "tsc --noEmit",
-    "brand:build": "bun run scripts/generate-brand-assets.ts",
-    "brand:check": "bun run scripts/generate-brand-assets.ts --check"
+    "brand:build": "NODE_PATH=./node_modules bun run ../scripts/generate-brand-assets.ts",
+    "brand:check": "NODE_PATH=./node_modules bun run ../scripts/generate-brand-assets.ts --check"
   },
   "dependencies": {
     "@tanstack/react-router": "^1.117.1",

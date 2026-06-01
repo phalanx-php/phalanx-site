@@ -15,8 +15,8 @@ type Package = {
 const MONOREPO_URL = 'https://github.com/phalanx-php/phalanx'
 
 const PACKAGES: Package[] = [
-  { name: 'phalanx-aegis', desc: 'Managed async runtime for PHP 8.4+ on OpenSwoole with scope, cancellation, service lifecycle, and concurrency primitives.', category: 'Core' },
-  { name: 'phalanx-stoa', desc: 'OpenSwoole-native HTTP runtime handling request/response translation, routing, middleware, validation, and lifecycle management.', category: 'Server' },
+  { name: 'phalanx-aegis', desc: 'Managed async runtime for PHP 8.4+ on ext-swoole 6 with scope, cancellation, service lifecycle, and concurrency primitives.', category: 'Core' },
+  { name: 'phalanx-stoa', desc: 'Swoole-native HTTP runtime handling request/response translation, routing, middleware, validation, and lifecycle management.', category: 'Server' },
   { name: 'phalanx-archon', desc: 'CLI application framework for supervised command workflows on the same managed runtime as your services.', category: 'Server' },
   { name: 'phalanx-hermes', desc: 'WebSocket server and client support including handshake, framing, pub/sub patterns, and HTTP upgrade integration.', category: 'Server' },
   { name: 'phalanx-athena', desc: 'AI agent runtime with provider adapters, tool execution, streaming output, structured responses, and multi-agent patterns.', category: 'Intelligence' },
@@ -24,12 +24,12 @@ const PACKAGES: Package[] = [
   { name: 'phalanx-hydra', desc: 'Worker-process parallelism for CPU-heavy or isolated work while preserving parent-runtime task coordination.', category: 'Concurrency' },
   { name: 'phalanx-eidolon', desc: 'Frontend bridge focused on typed route contracts, OpenAPI generation, Kubb integration, and signal-driven UI reactivity.', category: 'Interface' },
   { name: 'phalanx-iris', desc: 'Coroutine-aware HTTP client with connection pooling, automatic retries, and middleware support for outbound requests.', category: 'Infrastructure' },
-  { name: 'phalanx-redis', desc: 'OpenSwoole-native Redis integration with connection pooling, command pipelining, and pub/sub patterns.', category: 'Data' },
+  { name: 'phalanx-redis', desc: 'Swoole-native Redis integration with connection pooling, command pipelining, and pub/sub patterns.', category: 'Data' },
   { name: 'phalanx-surreal', desc: 'SurrealDB RPC and live-query client providing async data access through the Phalanx coordination runtime.', category: 'Data' },
   { name: 'phalanx-grammata', desc: 'Async-aware filesystem operations including streaming read/write workflows with resource governance under concurrency.', category: 'Data' },
   { name: 'phalanx-argos', desc: 'Network discovery and probing tasks including subnet scans, port checks, wake-on-LAN, and host/service inspection.', category: 'Infrastructure' },
   { name: 'phalanx-enigma', desc: 'Non-blocking SSH command execution, file transfer, and tunnel orchestration as composable runtime tasks.', category: 'Infrastructure' },
-  { name: 'phalanx-cli', desc: 'The Phalanx CLI tool providing environment diagnostics, OpenSwoole installation, and project scaffolding.', category: 'Tooling' },
+  { name: 'phalanx-cli', desc: 'The Phalanx CLI tool providing environment diagnostics, ext-swoole setup checks, and project scaffolding.', category: 'Tooling' },
   { name: 'phalanx-skopos', desc: 'Development server orchestrator that coordinates process startup, output multiplexing, and file-watch driven workflows.', category: 'Tooling' },
   { name: 'phalanx-phpstan', desc: 'PHPStan safety rules enforcing concurrency and runtime invariants for static analysis across Phalanx code.', category: 'Tooling' },
 ]
