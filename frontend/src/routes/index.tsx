@@ -23,11 +23,13 @@ const PACKAGES: Package[] = [
   { name: 'phalanx-styx', desc: 'Reactive stream primitives that convert push events into composable, pull-friendly pipelines for scoped async execution.', category: 'Concurrency' },
   { name: 'phalanx-hydra', desc: 'Worker-process parallelism for CPU-heavy or isolated work while preserving parent-runtime task coordination.', category: 'Concurrency' },
   { name: 'phalanx-eidolon', desc: 'Frontend bridge focused on typed route contracts, OpenAPI generation, Kubb integration, and signal-driven UI reactivity.', category: 'Interface' },
-  { name: 'phalanx-postgres', desc: 'Async PostgreSQL integration via amphp/postgres with pooled query and transaction workflows for runtime tasks.', category: 'Data' },
-  { name: 'phalanx-redis', desc: 'Async Redis integration via clue/redis-react with command and pub/sub patterns for runtime composition.', category: 'Data' },
+  { name: 'phalanx-iris', desc: 'Coroutine-aware HTTP client with connection pooling, automatic retries, and middleware support for outbound requests.', category: 'Infrastructure' },
+  { name: 'phalanx-redis', desc: 'OpenSwoole-native Redis integration with connection pooling, command pipelining, and pub/sub patterns.', category: 'Data' },
+  { name: 'phalanx-surreal', desc: 'SurrealDB RPC and live-query client providing async data access through the Phalanx coordination runtime.', category: 'Data' },
   { name: 'phalanx-grammata', desc: 'Async-aware filesystem operations including streaming read/write workflows with resource governance under concurrency.', category: 'Data' },
   { name: 'phalanx-argos', desc: 'Network discovery and probing tasks including subnet scans, port checks, wake-on-LAN, and host/service inspection.', category: 'Infrastructure' },
   { name: 'phalanx-enigma', desc: 'Non-blocking SSH command execution, file transfer, and tunnel orchestration as composable runtime tasks.', category: 'Infrastructure' },
+  { name: 'phalanx-cli', desc: 'The Phalanx CLI tool providing environment diagnostics, OpenSwoole installation, and project scaffolding.', category: 'Tooling' },
   { name: 'phalanx-skopos', desc: 'Development server orchestrator that coordinates process startup, output multiplexing, and file-watch driven workflows.', category: 'Tooling' },
   { name: 'phalanx-phpstan', desc: 'PHPStan safety rules enforcing concurrency and runtime invariants for static analysis across Phalanx code.', category: 'Tooling' },
 ]
@@ -70,12 +72,17 @@ function LandingPage() {
     <div className="flex min-h-screen flex-col items-center px-6 py-16">
       <div className="flex flex-col items-center gap-4">
         <PhalanxMark size={80} />
-        <h1 className="font-mono text-3xl font-bold tracking-[0.15em] text-phx-text">
-          PHALANX
-        </h1>
+        <div className="flex items-center gap-3">
+          <h1 className="font-mono text-3xl font-bold tracking-[0.15em] text-phx-text pl-12">
+            PHALANX
+          </h1>
+          <span className="rounded-full bg-phx-crimson/10 px-2.5 py-0.5 font-mono text-[10px] font-bold text-phx-crimson border border-phx-crimson/20">
+            0.2.0-ALPHA.1
+          </span>
+        </div>
         <p className="max-w-lg text-center text-sm leading-relaxed text-phx-text-muted">
           Open-source async coordination framework for PHP 8.4+.
-          Managed runtime primitives and libraries for servers, agents, streams, and infrastructure.
+          Phalanx 0.2.0-alpha.1 is now available! Managed runtime primitives and libraries for servers, agents, streams, and infrastructure.
         </p>
 
         <div className="mt-4 flex items-center gap-4 text-xs text-phx-text-muted">

@@ -7,7 +7,7 @@ namespace Phalanx\Site;
 final class SiteConfig
 {
     public function __construct(
-        public private(set) string $siteUrl,
+        private(set) string $siteUrl,
     ) {}
 
     public static function fromContext(array $context): self

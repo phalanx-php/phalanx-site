@@ -157,7 +157,7 @@ async function generateRoundedFavicons(captures: Map<string, Buffer>, writes: Ma
 }
 
 async function generateMarkFromSvg(writes: Map<string, Buffer>) {
-  const markSvgPath = path.join(monorepoDir, 'mark.svg')
+  const markSvgPath = path.join(monorepoDir, 'assets', 'mark.svg')
   const svgText = await readFile(markSvgPath, 'utf8')
 
   const resvg = new Resvg(svgText, {
@@ -167,17 +167,17 @@ async function generateMarkFromSvg(writes: Map<string, Buffer>) {
   const rendered = resvg.render()
   const png500 = await sharp(rendered.asPng()).resize(500, 500, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } }).png().toBuffer()
 
-  writes.set(path.join(monorepoDir, 'mark.png'), png500)
+  writes.set(path.join(monorepoDir, 'assets', 'mark.png'), png500)
   writes.set(path.join(designKitDir, 'mark', 'mark-500.png'), png500)
 }
 
 async function buildLogosDirectory(captures: Map<string, Buffer>, writes: Map<string, Buffer>) {
-  const markSvgPath = path.join(monorepoDir, 'mark.svg')
-  const bannerSvgPath = path.join(monorepoDir, 'logo.svg')
+  const markSvgPath = path.join(monorepoDir, 'assets', 'mark.svg')
+  const bannerSvgPath = path.join(monorepoDir, 'assets', 'banner.svg')
 
   const markSvg = await readFile(markSvgPath)
   const bannerSvg = await readFile(bannerSvgPath)
-  const mark500 = writes.get(path.join(monorepoDir, 'mark.png'))
+  const mark500 = writes.get(path.join(monorepoDir, 'assets', 'mark.png'))
   if (!mark500) throw new Error('mark-500 not generated yet')
 
   writes.set(path.join(logosDir, 'mark.svg'), markSvg)
@@ -243,11 +243,11 @@ async function buildLogosDirectory(captures: Map<string, Buffer>, writes: Map<st
 }
 
 async function distributeToMonorepo(writes: Map<string, Buffer>) {
-  const mark500 = writes.get(path.join(monorepoDir, 'mark.png'))
+  const mark500 = writes.get(path.join(monorepoDir, 'assets', 'mark.png'))
   if (!mark500) return
 
   const packagesDir = path.join(monorepoDir, 'packages')
-  const bannerSvg = await readFile(path.join(monorepoDir, 'logo.svg'))
+  const bannerSvg = await readFile(path.join(monorepoDir, 'assets', 'banner.svg'))
 
   const packages = await import('node:fs/promises').then(fs => fs.readdir(packagesDir))
   for (const pkg of packages) {
@@ -260,7 +260,7 @@ async function distributeToMonorepo(writes: Map<string, Buffer>) {
 
     await mkdir(brandDir, { recursive: true })
     if (!checkMode) {
-      await writeFile(path.join(brandDir, 'logo.svg'), bannerSvg)
+      await writeFile(path.join(brandDir, 'banner.svg'), bannerSvg)
       await writeFile(path.join(brandDir, 'mark.png'), mark500)
     }
   }
