@@ -8,16 +8,9 @@ function LandingPage() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center px-6 py-16">
       <div className="flex flex-col items-center gap-4">
-        <div className="flex items-center gap-3">
-          <h1 className="font-mono text-3xl font-bold tracking-[0.15em] text-phx-text">
-            PHALANX
-          </h1>
-          <span className="rounded-full bg-phx-crimson/10 px-2.5 py-0.5 font-mono text-[10px] font-bold text-phx-crimson border border-phx-crimson/20">
-            0.2.0-ALPHA.1
-          </span>
-        </div>
+        <img src="/assets/logos/banner.svg" alt="Phalanx" className="w-auto h-16 sm:h-20 mb-2" />
         <p className="max-w-lg text-center text-sm leading-relaxed text-phx-text-muted">
-          Open-source async coordination framework for PHP 8.4+.
+          Supervised execution framework for modern PHP.
           Phalanx 0.2.0-alpha.1 is now available! Managed runtime primitives and libraries for servers, agents, streams, and infrastructure.
         </p>
 

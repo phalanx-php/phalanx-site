@@ -96,7 +96,7 @@ function SocialComposition({ asset }: { asset: BrandAsset }) {
           letterSpacing: layout.tracking,
         }}
       >
-        Async Coordination for PHP
+        Supervised execution framework for modern PHP
       </p>
     </div>
   )

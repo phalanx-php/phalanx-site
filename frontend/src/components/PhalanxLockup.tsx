@@ -91,7 +91,7 @@ export function PhalanxLockup({
           className="tracking-[0.1em] uppercase"
           style={{ fontSize: taglineSize, color: colors.muted }}
         >
-          Async Coordination for PHP
+          Supervised execution framework for modern PHP
         </span>
       )}
     </div>
