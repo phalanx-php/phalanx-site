@@ -146,12 +146,13 @@
             "dist": {
                 "type": "path",
                 "url": "../../phalanx",
-                "reference": "cf819d809c3795cfe8af972e7da2017fc9dc96b6"
+                "reference": "4a478a6d2b05d656afc5016d43691b8893fc55eb"
             },
             "require": {
                 "mlocati/ip-lib": "^1.22",
                 "nikic/fast-route": "^2.0",
                 "php": "^8.4",
+                "php-collective/toml": "^0.1.3",
                 "symfony/console": "^7.0 || ^8.0",
                 "symfony/dotenv": "^7.0 || ^8.0",
                 "symfony/process": "^7.0 || ^8.0",
@@ -182,7 +183,6 @@
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^3.95",
                 "guzzlehttp/guzzle": "^7.10",
-                "php-collective/toml": "^0.1.3",
                 "phpstan/phpstan": "^2.0",
                 "phpunit/phpunit": "^13.0",
                 "rector/rector": "^2.0",
@@ -580,6 +580,66 @@
                 "symlink": true,
                 "relative": true
             }
+        },
+        {
+            "name": "php-collective/toml",
+            "version": "0.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-collective/toml.git",
+                "reference": "51810282d85d6333c60c866019c0e6548e26e483"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-collective/toml/zipball/51810282d85d6333c60c866019c0e6548e26e483",
+                "reference": "51810282d85d6333c60c866019c0e6548e26e483",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2",
+                "symfony/polyfill-mbstring": "^1.30"
+            },
+            "require-dev": {
+                "php-collective/code-sniffer": "dev-master",
+                "phpstan/phpstan": "^2.0",
+                "phpunit/phpunit": "^11.5 || ^12.5 || ^13.0"
+            },
+            "suggest": {
+                "ext-ds": "For improved performance with Set-based key tracking"
+            },
+            "bin": [
+                "bin/toml-validate"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PhpCollective\\Toml\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Scherer"
+                }
+            ],
+            "description": "A TOML parser and encoder for PHP with AST access and collected parse errors",
+            "homepage": "https://php-collective.github.io/toml/",
+            "keywords": [
+                "config",
+                "configuration",
+                "developer-tools",
+                "encoder",
+                "parser",
+                "toml"
+            ],
+            "support": {
+                "issues": "https://github.com/php-collective/toml/issues",
+                "source": "https://github.com/php-collective/toml/tree/0.1.5"
+            },
+            "time": "2026-05-31T05:16:19+00:00"
         },
         {
             "name": "psr/container",
