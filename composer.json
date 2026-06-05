@@ -5,7 +5,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.4",
-        "phalanx-php/phalanx": "dev-osr-175/standard-names",
+        "phalanx-php/phalanx": "dev-main",
         "symfony/runtime": "^7.2"
     },
     "autoload": {

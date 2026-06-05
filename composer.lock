@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a5ad2cd89ba90b77321d46138e18959e",
+    "content-hash": "7f7734667c85aa49cd499c5b3a69ad27",
     "packages": [
         {
             "name": "mlocati/ip-lib",
@@ -142,11 +142,11 @@
         },
         {
             "name": "phalanx-php/phalanx",
-            "version": "dev-osr-175/standard-names",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "../../phalanx",
-                "reference": "f79df1b5448c92a20956b5edb738d31052b1ea77"
+                "reference": "cf819d809c3795cfe8af972e7da2017fc9dc96b6"
             },
             "require": {
                 "mlocati/ip-lib": "^1.22",
@@ -159,7 +159,7 @@
                 "symfony/yaml": "^8.0"
             },
             "replace": {
-                "phalanx-php/agent": "self.version",
+                "phalanx-php/agents": "self.version",
                 "phalanx-php/ai-providers": "self.version",
                 "phalanx-php/cli": "self.version",
                 "phalanx-php/config": "self.version",
@@ -196,28 +196,28 @@
             "type": "project",
             "autoload": {
                 "files": [
-                    "src/Tui/Tui/Kit/functions.php"
+                    "src/Tui/src/Kit/functions.php"
                 ],
                 "psr-4": {
-                    "Phalanx\\": "src/Runtime/",
-                    "Phalanx\\Console\\": "src/Console/",
-                    "Phalanx\\Network\\": "src/Network/",
-                    "Phalanx\\Agent\\": "src/Agent/",
-                    "Phalanx\\Cli\\": "src/Cli/",
-                    "Phalanx\\Ssh\\": "src/Ssh/",
-                    "Phalanx\\Filesystem\\": "src/Filesystem/",
-                    "Phalanx\\WebSocket\\": "src/WebSocket/",
-                    "Phalanx\\Worker\\": "src/Worker/",
-                    "Phalanx\\HttpClient\\": "src/HttpClient/",
-                    "Phalanx\\Mark\\": "src/Mark/",
-                    "Phalanx\\PHPStan\\": "src/PHPStan/",
-                    "Phalanx\\AiProviders\\": "src/AiProviders/",
-                    "Phalanx\\DevServer\\": "src/DevServer/",
-                    "Phalanx\\Http\\": "src/Http/",
-                    "Phalanx\\Stream\\": "src/Stream/",
-                    "Phalanx\\SurrealDb\\": "src/SurrealDb/",
-                    "Phalanx\\Tui\\": "src/Tui/",
-                    "Phalanx\\Config\\": "src/Config/"
+                    "Phalanx\\": "src/Runtime/src/",
+                    "Phalanx\\Console\\": "src/Console/src/",
+                    "Phalanx\\Network\\": "src/Network/src/",
+                    "Phalanx\\Agents\\": "src/Agents/src/",
+                    "Phalanx\\Cli\\": "src/Cli/src/",
+                    "Phalanx\\Ssh\\": "src/Ssh/src/",
+                    "Phalanx\\Filesystem\\": "src/Filesystem/src/",
+                    "Phalanx\\WebSocket\\": "src/WebSocket/src/",
+                    "Phalanx\\Worker\\": "src/Worker/src/",
+                    "Phalanx\\HttpClient\\": "src/HttpClient/src/",
+                    "Phalanx\\Mark\\": "src/Mark/src/",
+                    "Phalanx\\PHPStan\\": "src/PHPStan/src/",
+                    "Phalanx\\AiProviders\\": "src/AiProviders/src/",
+                    "Phalanx\\DevServer\\": "src/DevServer/src/",
+                    "Phalanx\\Http\\": "src/Http/src/",
+                    "Phalanx\\Stream\\": "src/Stream/src/",
+                    "Phalanx\\SurrealDb\\": "src/SurrealDb/src/",
+                    "Phalanx\\Tui\\": "src/Tui/src/",
+                    "Phalanx\\Config\\": "src/Config/src/"
                 }
             },
             "autoload-dev": {
@@ -226,13 +226,13 @@
                     "Phalanx\\Benchmarks\\Http\\": "benchmarks/http/",
                     "Phalanx\\Benchmarks\\Kernel\\": "benchmarks/kernel/",
                     "Phalanx\\Demos\\Kit\\": "demos/_kit/",
-                    "Phalanx\\Demos\\Agent\\": "demos/agent/",
+                    "Phalanx\\Demos\\Agents\\": "demos/agents/",
                     "Phalanx\\Demos\\SurrealDb\\": "demos/surrealdb/",
                     "Phalanx\\Tests\\": "tests/",
                     "Phalanx\\Runtime\\Tests\\": "src/Runtime/tests/",
                     "Phalanx\\Console\\Tests\\": "src/Console/tests/",
                     "Phalanx\\Network\\Tests\\": "src/Network/tests/",
-                    "Phalanx\\Agent\\Tests\\": "src/Agent/tests/",
+                    "Phalanx\\Agents\\Tests\\": "src/Agents/tests/",
                     "Phalanx\\Cli\\Tests\\": "src/Cli/tests/",
                     "Phalanx\\Ssh\\Tests\\": "src/Ssh/tests/",
                     "Phalanx\\Filesystem\\Tests\\": "src/Filesystem/tests/",
@@ -254,8 +254,8 @@
                     "src/Runtime/tests/Support/Fixtures/",
                     "src/PHPStan/tests/Rules/Fixtures/",
                     "src/PHPStan/tests/Integration/Fixtures/",
-                    "demos/agent/support-triage/src/",
-                    "demos/agent/research-agent/src/",
+                    "demos/agents/support-triage/src/",
+                    "demos/agents/research-agent/src/",
                     "demos/worker/01-basic-workers/src/",
                     "demos/worker/02-structured-parallel/src/",
                     "demos/worker/03-cancellation-fail-fast/src/",
@@ -446,34 +446,34 @@
                 "demo:console:errors:deep": [
                     "php demos/console/05-error-diagnostics/ultra_deep.php"
                 ],
-                "demo:agent": [
-                    "@demo:agent:streaming",
-                    "@demo:agent:guzzle",
-                    "@demo:agent:mcp-stdio",
-                    "@demo:agent:mcp-sse",
-                    "@demo:agent:support-triage",
-                    "@demo:agent:research-agent"
+                "demo:agents": [
+                    "@demo:agents:streaming",
+                    "@demo:agents:guzzle",
+                    "@demo:agents:mcp-stdio",
+                    "@demo:agents:mcp-sse",
+                    "@demo:agents:support-triage",
+                    "@demo:agents:research-agent"
                 ],
-                "demo:agent:streaming": [
-                    "php demos/agent/01-streaming-providers/demo.php"
+                "demo:agents:streaming": [
+                    "php demos/agents/01-streaming-providers/demo.php"
                 ],
-                "demo:agent:guzzle": [
-                    "php demos/agent/02-third-party-sdk-alongside-agent/demo.php"
+                "demo:agents:guzzle": [
+                    "php demos/agents/02-third-party-sdk-alongside-agent/demo.php"
                 ],
-                "demo:agent:mcp-stdio": [
-                    "php demos/agent/03-mcp-stdio/demo.php"
+                "demo:agents:mcp-stdio": [
+                    "php demos/agents/03-mcp-stdio/demo.php"
                 ],
-                "demo:agent:mcp-sse": [
-                    "php demos/agent/04-mcp-sse/demo.php"
+                "demo:agents:mcp-sse": [
+                    "php demos/agents/04-mcp-sse/demo.php"
                 ],
-                "demo:agent:support-triage": [
-                    "php demos/agent/support-triage/demo.php"
+                "demo:agents:support-triage": [
+                    "php demos/agents/support-triage/demo.php"
                 ],
-                "demo:agent:research-agent": [
-                    "php demos/agent/research-agent/demo.php"
+                "demo:agents:research-agent": [
+                    "php demos/agents/research-agent/demo.php"
                 ],
-                "demo:agent:serve:support-triage": [
-                    "php demos/agent/support-triage/server.php"
+                "demo:agents:serve:support-triage": [
+                    "php demos/agents/support-triage/server.php"
                 ],
                 "demo:surrealdb": [
                     "@demo:surrealdb:memory",
@@ -517,8 +517,8 @@
                 "test:network": [
                     "php -d memory_limit=512M vendor/bin/phpunit -c src/Network/phpunit.xml"
                 ],
-                "test:agent": [
-                    "php -d memory_limit=512M vendor/bin/phpunit -c src/Agent/phpunit.xml.dist"
+                "test:agents": [
+                    "php -d memory_limit=512M vendor/bin/phpunit -c src/Agents/phpunit.xml.dist"
                 ],
                 "test:cli": [
                     "php -d memory_limit=512M vendor/bin/phpunit -c src/Cli/phpunit.xml.dist"
