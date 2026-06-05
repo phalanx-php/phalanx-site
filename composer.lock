@@ -146,7 +146,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../phalanx",
-                "reference": "5aa434db2cc1f7ccbfdacc40eac961e7c162b964"
+                "reference": "f79df1b5448c92a20956b5edb738d31052b1ea77"
             },
             "require": {
                 "mlocati/ip-lib": "^1.22",
