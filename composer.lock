@@ -4,32 +4,33 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b33c5bc05784ac61d1e92fb3ae6fe1a6",
+    "content-hash": "a5ad2cd89ba90b77321d46138e18959e",
     "packages": [
         {
-            "name": "evenement/evenement",
-            "version": "v3.0.2",
+            "name": "mlocati/ip-lib",
+            "version": "1.22.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/igorw/evenement.git",
-                "reference": "0a16b0d71ab13284339abb99d9d2bd813640efbc"
+                "url": "https://github.com/mlocati/ip-lib.git",
+                "reference": "4e40ffd3bf9989db19403d89c4d8be44b87b8a91"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/igorw/evenement/zipball/0a16b0d71ab13284339abb99d9d2bd813640efbc",
-                "reference": "0a16b0d71ab13284339abb99d9d2bd813640efbc",
+                "url": "https://api.github.com/repos/mlocati/ip-lib/zipball/4e40ffd3bf9989db19403d89c4d8be44b87b8a91",
+                "reference": "4e40ffd3bf9989db19403d89c4d8be44b87b8a91",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.0"
+                "php": ">=5.3.3"
             },
             "require-dev": {
-                "phpunit/phpunit": "^9 || ^6"
+                "ext-pdo_sqlite": "*",
+                "phpunit/phpunit": "^4.8 || ^5.7 || ^6.5 || ^7.5 || ^8.5 || ^9.5"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Evenement\\": "src/"
+                    "IPLib\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -38,76 +39,43 @@
             ],
             "authors": [
                 {
-                    "name": "Igor Wiedler",
-                    "email": "igor@wiedler.ch"
+                    "name": "Michele Locati",
+                    "email": "mlocati@gmail.com",
+                    "homepage": "https://github.com/mlocati",
+                    "role": "Author"
                 }
             ],
-            "description": "Événement is a very simple event dispatching library for PHP",
+            "description": "Handle IPv4, IPv6 addresses and ranges",
+            "homepage": "https://github.com/mlocati/ip-lib",
             "keywords": [
-                "event-dispatcher",
-                "event-emitter"
+                "IP",
+                "address",
+                "addresses",
+                "ipv4",
+                "ipv6",
+                "manage",
+                "managing",
+                "matching",
+                "network",
+                "networking",
+                "range",
+                "subnet"
             ],
             "support": {
-                "issues": "https://github.com/igorw/evenement/issues",
-                "source": "https://github.com/igorw/evenement/tree/v3.0.2"
+                "issues": "https://github.com/mlocati/ip-lib/issues",
+                "source": "https://github.com/mlocati/ip-lib/tree/1.22.0"
             },
-            "time": "2023-08-08T05:53:35+00:00"
-        },
-        {
-            "name": "fig/http-message-util",
-            "version": "1.1.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/http-message-util.git",
-                "reference": "9d94dc0154230ac39e5bf89398b324a86f63f765"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-message-util/zipball/9d94dc0154230ac39e5bf89398b324a86f63f765",
-                "reference": "9d94dc0154230ac39e5bf89398b324a86f63f765",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.3 || ^7.0 || ^8.0"
-            },
-            "suggest": {
-                "psr/http-message": "The package containing the PSR-7 interfaces"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Fig\\Http\\Message\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
+            "funding": [
                 {
-                    "name": "PHP-FIG",
-                    "homepage": "https://www.php-fig.org/"
+                    "url": "https://github.com/sponsors/mlocati",
+                    "type": "github"
+                },
+                {
+                    "url": "https://paypal.me/mlocati",
+                    "type": "other"
                 }
             ],
-            "description": "Utility classes and constants for use with PSR-7 (psr/http-message)",
-            "keywords": [
-                "http",
-                "http-message",
-                "psr",
-                "psr-7",
-                "request",
-                "response"
-            ],
-            "support": {
-                "issues": "https://github.com/php-fig/http-message-util/issues",
-                "source": "https://github.com/php-fig/http-message-util/tree/1.1.5"
-            },
-            "time": "2020-11-24T22:02:12+00:00"
+            "time": "2025-10-15T12:35:09+00:00"
         },
         {
             "name": "nikic/fast-route",
@@ -173,74 +141,429 @@
             "time": "2024-03-04T23:46:43+00:00"
         },
         {
-            "name": "phalanx/aegis",
-            "version": "dev-main",
+            "name": "phalanx-php/phalanx",
+            "version": "dev-osr-175/standard-names",
             "dist": {
                 "type": "path",
-                "url": "../../phalanx/packages/phalanx-core",
-                "reference": "c9a28c343e4f53dda8fe8f4ca6da05edcb38b8ff"
+                "url": "../../phalanx",
+                "reference": "5aa434db2cc1f7ccbfdacc40eac961e7c162b964"
             },
             "require": {
+                "mlocati/ip-lib": "^1.22",
+                "nikic/fast-route": "^2.0",
                 "php": "^8.4",
-                "react/async": "^4.3",
-                "react/event-loop": "^1.5",
-                "react/promise": "^3.2"
+                "symfony/console": "^7.0 || ^8.0",
+                "symfony/dotenv": "^7.0 || ^8.0",
+                "symfony/process": "^7.0 || ^8.0",
+                "symfony/uid": "^7.0 || ^8.0",
+                "symfony/yaml": "^8.0"
+            },
+            "replace": {
+                "phalanx-php/agent": "self.version",
+                "phalanx-php/ai-providers": "self.version",
+                "phalanx-php/cli": "self.version",
+                "phalanx-php/config": "self.version",
+                "phalanx-php/console": "self.version",
+                "phalanx-php/dev-server": "self.version",
+                "phalanx-php/filesystem": "self.version",
+                "phalanx-php/http": "self.version",
+                "phalanx-php/http-client": "self.version",
+                "phalanx-php/mark": "self.version",
+                "phalanx-php/network": "self.version",
+                "phalanx-php/phpstan": "self.version",
+                "phalanx-php/runtime": "self.version",
+                "phalanx-php/ssh": "self.version",
+                "phalanx-php/stream": "self.version",
+                "phalanx-php/surrealdb": "self.version",
+                "phalanx-php/tui": "self.version",
+                "phalanx-php/websocket": "self.version",
+                "phalanx-php/worker": "self.version"
             },
             "require-dev": {
-                "phalanx/console": "^0.5",
-                "phalanx/stoa": "^0.5",
-                "phalanx/parallel": "^0.5",
+                "friendsofphp/php-cs-fixer": "^3.95",
+                "guzzlehttp/guzzle": "^7.10",
+                "php-collective/toml": "^0.1.3",
                 "phpstan/phpstan": "^2.0",
-                "phpunit/phpunit": "^11.0",
-                "react/promise-timer": "^1.11",
+                "phpunit/phpunit": "^13.0",
                 "rector/rector": "^2.0",
+                "rector/swiss-knife": "^2.3",
                 "slevomat/coding-standard": "^8.15",
-                "squizlabs/php_codesniffer": "^3.10"
+                "spatie/ignition": "^1.15",
+                "squizlabs/php_codesniffer": "^3.10 || ^4.0",
+                "swoole/ide-helper": "^6.0",
+                "symfony/runtime": "^7.0 || ^8.0"
             },
-            "suggest": {
-                "phalanx/console": "CLI application framework",
-                "phalanx/stoa": "HTTP server framework",
-                "phalanx/parallel": "Worker process parallelism",
-                "phalanx/stream": "Reactive stream primitives (Emitter, ScopedStream, Channel)",
-                "react/http": "Required for HttpRunner",
-                "spatie/backtrace": "Enhanced stack traces",
-                "symfony/dotenv": "For .env file support",
-                "symfony/runtime": "For symfony/runtime integration"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-main": "0.5.x-dev"
-                }
-            },
+            "type": "project",
             "autoload": {
+                "files": [
+                    "src/Tui/Tui/Kit/functions.php"
+                ],
                 "psr-4": {
-                    "Phalanx\\": "src/"
+                    "Phalanx\\": "src/Runtime/",
+                    "Phalanx\\Console\\": "src/Console/",
+                    "Phalanx\\Network\\": "src/Network/",
+                    "Phalanx\\Agent\\": "src/Agent/",
+                    "Phalanx\\Cli\\": "src/Cli/",
+                    "Phalanx\\Ssh\\": "src/Ssh/",
+                    "Phalanx\\Filesystem\\": "src/Filesystem/",
+                    "Phalanx\\WebSocket\\": "src/WebSocket/",
+                    "Phalanx\\Worker\\": "src/Worker/",
+                    "Phalanx\\HttpClient\\": "src/HttpClient/",
+                    "Phalanx\\Mark\\": "src/Mark/",
+                    "Phalanx\\PHPStan\\": "src/PHPStan/",
+                    "Phalanx\\AiProviders\\": "src/AiProviders/",
+                    "Phalanx\\DevServer\\": "src/DevServer/",
+                    "Phalanx\\Http\\": "src/Http/",
+                    "Phalanx\\Stream\\": "src/Stream/",
+                    "Phalanx\\SurrealDb\\": "src/SurrealDb/",
+                    "Phalanx\\Tui\\": "src/Tui/",
+                    "Phalanx\\Config\\": "src/Config/"
                 }
             },
             "autoload-dev": {
                 "psr-4": {
-                    "Phalanx\\Tests\\": "tests/"
+                    "Phalanx\\Benchmarks\\Kit\\": "benchmarks/_kit/",
+                    "Phalanx\\Benchmarks\\Http\\": "benchmarks/http/",
+                    "Phalanx\\Benchmarks\\Kernel\\": "benchmarks/kernel/",
+                    "Phalanx\\Demos\\Kit\\": "demos/_kit/",
+                    "Phalanx\\Demos\\Agent\\": "demos/agent/",
+                    "Phalanx\\Demos\\SurrealDb\\": "demos/surrealdb/",
+                    "Phalanx\\Tests\\": "tests/",
+                    "Phalanx\\Runtime\\Tests\\": "src/Runtime/tests/",
+                    "Phalanx\\Console\\Tests\\": "src/Console/tests/",
+                    "Phalanx\\Network\\Tests\\": "src/Network/tests/",
+                    "Phalanx\\Agent\\Tests\\": "src/Agent/tests/",
+                    "Phalanx\\Cli\\Tests\\": "src/Cli/tests/",
+                    "Phalanx\\Ssh\\Tests\\": "src/Ssh/tests/",
+                    "Phalanx\\Filesystem\\Tests\\": "src/Filesystem/tests/",
+                    "Phalanx\\WebSocket\\Tests\\": "src/WebSocket/tests/",
+                    "Phalanx\\Worker\\Tests\\": "src/Worker/tests/",
+                    "Phalanx\\HttpClient\\Tests\\": "src/HttpClient/tests/",
+                    "Phalanx\\Mark\\Tests\\": "src/Mark/tests/",
+                    "Phalanx\\PHPStan\\Tests\\": "src/PHPStan/tests/",
+                    "Phalanx\\AiProviders\\Tests\\": "src/AiProviders/tests/",
+                    "Phalanx\\DevServer\\Tests\\": "src/DevServer/tests/",
+                    "Phalanx\\Http\\Tests\\": "src/Http/tests/",
+                    "Phalanx\\Stream\\Tests\\": "src/Stream/tests/",
+                    "Phalanx\\SurrealDb\\Tests\\": "src/SurrealDb/tests/",
+                    "Phalanx\\Tui\\Tests\\": "src/Tui/tests/",
+                    "Phalanx\\Config\\Tests\\": "src/Config/tests/",
+                    "Phalanx\\WebSocket\\Client\\Tests\\": "src/WebSocket/tests/Client/"
                 },
                 "classmap": [
-                    "tests/Support/Fixtures/"
+                    "src/Runtime/tests/Support/Fixtures/",
+                    "src/PHPStan/tests/Rules/Fixtures/",
+                    "src/PHPStan/tests/Integration/Fixtures/",
+                    "demos/agent/support-triage/src/",
+                    "demos/agent/research-agent/src/",
+                    "demos/worker/01-basic-workers/src/",
+                    "demos/worker/02-structured-parallel/src/",
+                    "demos/worker/03-cancellation-fail-fast/src/",
+                    "demos/console/01-basic-commands/src/",
+                    "demos/console/02-interactive-input/src/",
+                    "demos/console/03-supervised-concurrency/src/",
+                    "demos/console/04-runtime-lifecycle/src/",
+                    "demos/http/01-basic-routing/src/",
+                    "demos/http/02-api/src/",
+                    "demos/http/03-realtime/src/",
+                    "demos/http/04-runtime-lifecycle/src/"
+                ]
+            },
+            "archive": {
+                "exclude": [
+                    "/.aimind",
+                    "/.claude",
+                    "/.daemon8",
+                    "/.DS_Store",
+                    "/.github",
+                    "/.idea",
+                    "/.php-cs-fixer.cache",
+                    "/.phpstan-cache",
+                    "/.phpunit.result.cache",
+                    "/README.ai-draft.md",
+                    "/benchmarks",
+                    "/demos",
+                    "/docs",
+                    "/examples",
+                    "/history.txt",
+                    "/phpcs.xml",
+                    "/phpstan.neon",
+                    "/phpunit.xml",
+                    "/rector.php",
+                    "/roadmap",
+                    "/roadmap/**",
+                    "/src/*/demos",
+                    "/src/*/phpunit.xml",
+                    "/src/*/phpunit.xml.dist",
+                    "/src/*/tests",
+                    "/tests",
+                    "/tmp",
+                    "/tools",
+                    "/vendor"
                 ]
             },
             "scripts": {
+                "test": [
+                    "php -d memory_limit=1G vendor/bin/phpunit"
+                ],
+                "test:ai-providers:integration": [
+                    "php -d memory_limit=512M vendor/bin/phpunit -c src/AiProviders/phpunit.xml.dist --testsuite=Integration --do-not-fail-on-empty-test-suite"
+                ],
+                "test:ai-providers:acceptance": [
+                    "php -d memory_limit=512M vendor/bin/phpunit -c src/AiProviders/phpunit.xml.dist --testsuite=Acceptance"
+                ],
+                "analyse": [
+                    "php vendor/bin/phpstan analyse --memory-limit=512M"
+                ],
+                "audit:runtime-risk": [
+                    "php src/PHPStan/bin/runtime-risk-audit"
+                ],
                 "rector": [
-                    "rector process"
+                    "php vendor/bin/rector process"
                 ],
                 "rector:dry": [
-                    "rector process --dry-run"
+                    "php vendor/bin/rector process --dry-run"
                 ],
                 "cs": [
-                    "phpcs"
+                    "php vendor/bin/phpcs --standard=phpcs.xml"
                 ],
                 "cs:fix": [
-                    "phpcbf"
+                    "php vendor/bin/phpcbf --standard=phpcs.xml"
                 ],
-                "test": [
-                    "php vendor/bin/phpunit"
+                "cs:fixer": [
+                    "php vendor/bin/php-cs-fixer fix --dry-run --diff"
+                ],
+                "cs:fixer:fix": [
+                    "php vendor/bin/php-cs-fixer fix"
+                ],
+                "bench:runtime": [
+                    "php -d memory_limit=512M benchmarks/kernel/run.php"
+                ],
+                "bench:http": [
+                    "php -d memory_limit=512M benchmarks/http/run.php"
+                ],
+                "bench:wrk": [
+                    "php -d memory_limit=512M benchmarks/http/server.php"
+                ],
+                "demo:runtime": [
+                    "@demo:runtime:runtime",
+                    "@demo:runtime:supervision",
+                    "@demo:runtime:cancellation",
+                    "@demo:runtime:singleflight",
+                    "@demo:runtime:memory"
+                ],
+                "demo:runtime:runtime": [
+                    "php demos/runtime/01-runtime-policy/demo.php"
+                ],
+                "demo:runtime:supervision": [
+                    "php demos/runtime/02-scope-supervision/demo.php"
+                ],
+                "demo:runtime:cancellation": [
+                    "php demos/runtime/03-cancellation/demo.php"
+                ],
+                "demo:runtime:singleflight": [
+                    "php demos/runtime/04-singleflight/demo.php"
+                ],
+                "demo:runtime:memory": [
+                    "php demos/runtime/05-runtime-memory/demo.php"
+                ],
+                "demo:worker": [
+                    "@demo:worker:basic",
+                    "@demo:worker:parallel",
+                    "@demo:worker:cancellation"
+                ],
+                "demo:worker:basic": [
+                    "php demos/worker/01-basic-workers/demo.php"
+                ],
+                "demo:worker:parallel": [
+                    "php demos/worker/02-structured-parallel/demo.php"
+                ],
+                "demo:worker:cancellation": [
+                    "php demos/worker/03-cancellation-fail-fast/demo.php"
+                ],
+                "demo:http": [
+                    "@demo:http:quickstart",
+                    "@demo:http:api",
+                    "@demo:http:realtime",
+                    "@demo:http:runtime"
+                ],
+                "demo:http:quickstart": [
+                    "php demos/http/01-basic-routing/demo.php"
+                ],
+                "demo:http:api": [
+                    "php demos/http/02-api/demo.php"
+                ],
+                "demo:http:realtime": [
+                    "php demos/http/03-realtime/demo.php"
+                ],
+                "demo:http:runtime": [
+                    "php demos/http/04-runtime-lifecycle/demo.php"
+                ],
+                "demo:http:errors": [
+                    "php demos/http/05-error-diagnostics/demo.php"
+                ],
+                "demo:http:serve:quickstart": [
+                    "php demos/http/01-basic-routing/server.php"
+                ],
+                "demo:http:serve:api": [
+                    "php demos/http/02-api/server.php"
+                ],
+                "demo:http:serve:realtime": [
+                    "php demos/http/03-realtime/server.php"
+                ],
+                "demo:http:serve:runtime": [
+                    "php demos/http/04-runtime-lifecycle/server.php"
+                ],
+                "demo:http:serve:errors": [
+                    "php demos/http/05-error-diagnostics/server.php"
+                ],
+                "demo:console": [
+                    "@demo:console:basic",
+                    "@demo:console:interactive",
+                    "@demo:console:concurrency",
+                    "@demo:console:lifecycle",
+                    "@demo:console:errors"
+                ],
+                "demo:console:basic": [
+                    "php demos/console/01-basic-commands/demo.php"
+                ],
+                "demo:console:interactive": [
+                    "php demos/console/02-interactive-input/demo.php"
+                ],
+                "demo:console:concurrency": [
+                    "php demos/console/03-supervised-concurrency/demo.php"
+                ],
+                "demo:console:lifecycle": [
+                    "php demos/console/04-runtime-lifecycle/demo.php"
+                ],
+                "demo:console:errors": [
+                    "@demo:console:errors:basic",
+                    "@demo:console:errors:deep"
+                ],
+                "demo:console:errors:basic": [
+                    "php demos/console/05-error-diagnostics/demo.php"
+                ],
+                "demo:console:errors:deep": [
+                    "php demos/console/05-error-diagnostics/ultra_deep.php"
+                ],
+                "demo:agent": [
+                    "@demo:agent:streaming",
+                    "@demo:agent:guzzle",
+                    "@demo:agent:mcp-stdio",
+                    "@demo:agent:mcp-sse",
+                    "@demo:agent:support-triage",
+                    "@demo:agent:research-agent"
+                ],
+                "demo:agent:streaming": [
+                    "php demos/agent/01-streaming-providers/demo.php"
+                ],
+                "demo:agent:guzzle": [
+                    "php demos/agent/02-third-party-sdk-alongside-agent/demo.php"
+                ],
+                "demo:agent:mcp-stdio": [
+                    "php demos/agent/03-mcp-stdio/demo.php"
+                ],
+                "demo:agent:mcp-sse": [
+                    "php demos/agent/04-mcp-sse/demo.php"
+                ],
+                "demo:agent:support-triage": [
+                    "php demos/agent/support-triage/demo.php"
+                ],
+                "demo:agent:research-agent": [
+                    "php demos/agent/research-agent/demo.php"
+                ],
+                "demo:agent:serve:support-triage": [
+                    "php demos/agent/support-triage/server.php"
+                ],
+                "demo:surrealdb": [
+                    "@demo:surrealdb:memory",
+                    "@demo:surrealdb:live"
+                ],
+                "demo:surrealdb:memory": [
+                    "php demos/surrealdb/01-in-memory-rpc/demo.php"
+                ],
+                "demo:surrealdb:live": [
+                    "php demos/surrealdb/02-live-query/demo.php"
+                ],
+                "demo:dev-server:basic-dev": [
+                    "php demos/dev-server/01-basic-dev/dev-server.php"
+                ],
+                "examples:lint": [
+                    "find demos -name '*.php' -not -path '*/vendor/*' -print0 | xargs -0 -n1 php -l > /dev/null"
+                ],
+                "gen:test-accessors": [
+                    "php src/Runtime/bin/regenerate-accessors"
+                ],
+                "gen:test-accessors:check": [
+                    "php src/Runtime/bin/check-accessors-in-sync"
+                ],
+                "post-autoload-dump": [
+                    "@gen:test-accessors"
+                ],
+                "check": [
+                    "@analyse",
+                    "@rector:dry",
+                    "@cs",
+                    "@gen:test-accessors:check",
+                    "@test",
+                    "@examples:lint"
+                ],
+                "test:runtime": [
+                    "php -d memory_limit=512M vendor/bin/phpunit -c src/Runtime/phpunit.xml.dist"
+                ],
+                "test:console": [
+                    "php -d memory_limit=512M vendor/bin/phpunit -c src/Console/phpunit.xml"
+                ],
+                "test:network": [
+                    "php -d memory_limit=512M vendor/bin/phpunit -c src/Network/phpunit.xml"
+                ],
+                "test:agent": [
+                    "php -d memory_limit=512M vendor/bin/phpunit -c src/Agent/phpunit.xml.dist"
+                ],
+                "test:cli": [
+                    "php -d memory_limit=512M vendor/bin/phpunit -c src/Cli/phpunit.xml.dist"
+                ],
+                "test:ssh": [
+                    "php -d memory_limit=512M vendor/bin/phpunit -c src/Ssh/phpunit.xml.dist"
+                ],
+                "test:filesystem": [
+                    "php -d memory_limit=512M vendor/bin/phpunit -c src/Filesystem/phpunit.xml"
+                ],
+                "test:websocket": [
+                    "php -d memory_limit=512M vendor/bin/phpunit -c src/WebSocket/phpunit.xml.dist"
+                ],
+                "test:worker": [
+                    "php -d memory_limit=512M vendor/bin/phpunit -c src/Worker/phpunit.xml"
+                ],
+                "test:http-client": [
+                    "php -d memory_limit=512M vendor/bin/phpunit -c src/HttpClient/phpunit.xml.dist"
+                ],
+                "test:mark": [
+                    "php -d memory_limit=512M vendor/bin/phpunit -c src/Mark/phpunit.xml"
+                ],
+                "test:phpstan": [
+                    "php -d memory_limit=512M vendor/bin/phpunit -c src/PHPStan/phpunit.xml.dist"
+                ],
+                "test:ai-providers": [
+                    "php -d memory_limit=512M vendor/bin/phpunit -c src/AiProviders/phpunit.xml.dist --testsuite=Unit"
+                ],
+                "test:dev-server": [
+                    "php -d memory_limit=512M vendor/bin/phpunit -c src/DevServer/phpunit.xml.dist"
+                ],
+                "test:http": [
+                    "php -d memory_limit=512M vendor/bin/phpunit -c src/Http/phpunit.xml"
+                ],
+                "test:stream": [
+                    "php -d memory_limit=512M vendor/bin/phpunit -c src/Stream/phpunit.xml"
+                ],
+                "test:surrealdb": [
+                    "php -d memory_limit=512M vendor/bin/phpunit -c src/SurrealDb/phpunit.xml.dist"
+                ],
+                "test:tui": [
+                    "php -d memory_limit=512M vendor/bin/phpunit -c src/Tui/phpunit.xml"
+                ],
+                "test:config": [
+                    "php -d memory_limit=512M vendor/bin/phpunit -c src/Config/phpunit.xml"
                 ]
             },
             "license": [
@@ -252,222 +575,38 @@
                     "email": "mail@phalanx-php.com"
                 }
             ],
-            "description": "Expression-based async coordination for PHP 8.4+",
-            "homepage": "https://github.com/phalanx-php/phalanx-aegis",
-            "keywords": [
-                "async",
-                "concurrency",
-                "event-loop",
-                "fibers",
-                "parallel",
-                "promises",
-                "reactphp"
-            ],
+            "description": "Supervised execution framework for modern PHP",
             "transport-options": {
+                "symlink": true,
                 "relative": true
             }
         },
         {
-            "name": "phalanx/stoa",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "../../phalanx/packages/phalanx-http",
-                "reference": "5d5f7880a5ff525fc2abc270e2b48e1fc6443386"
-            },
-            "require": {
-                "nikic/fast-route": "^2.0",
-                "phalanx/aegis": "^0.5",
-                "php": "^8.4",
-                "react/datagram": "^1.10",
-                "react/http": "^1.10"
-            },
-            "suggest": {
-                "phalanx/parallel": "For worker process parallelism in request handlers",
-                "phalanx/stream": "For streaming responses",
-                "symfony/runtime": "For Symfony Runtime integration via PhalanxHttpRunner"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-main": "0.5-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Phalanx\\Http\\": "src/"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Phalanx\\Tests\\Http\\": "tests/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jonathan Havens",
-                    "email": "mail@phalanx-php.com"
-                }
-            ],
-            "description": "HTTP server framework for Phalanx",
-            "homepage": "https://github.com/phalanx-php/phalanx-stoa",
-            "keywords": [
-                "async",
-                "fastroute",
-                "http",
-                "reactphp",
-                "routing",
-                "server"
-            ],
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
-            "name": "phalanx/stream",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "../../phalanx/packages/phalanx-stream",
-                "reference": "e4d02a3629c062597a445ad267e44d4ffaf65e53"
-            },
-            "require": {
-                "evenement/evenement": "^3.0",
-                "phalanx/aegis": "^0.5",
-                "php": "^8.4",
-                "react/async": "^4.3",
-                "react/event-loop": "^1.5",
-                "react/stream": "^1.4"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-main": "0.5-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Phalanx\\Stream\\": "src/"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Phalanx\\Stream\\Tests\\": "tests/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jonathan Havens",
-                    "email": "mail@phalanx-php.com"
-                }
-            ],
-            "description": "Reactive stream primitives for Phalanx",
-            "homepage": "https://github.com/phalanx-php/phalanx-stream",
-            "keywords": [
-                "async",
-                "backpressure",
-                "channel",
-                "emitter",
-                "reactive",
-                "reactphp",
-                "stream"
-            ],
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
-            "name": "phalanx/eidolon",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "../../phalanx/packages/phalanx-ui",
-                "reference": "d957f49ce2c6dc76f3f947dd2b7a38abe79c8e6c"
-            },
-            "require": {
-                "phalanx/aegis": "^0.5",
-                "phalanx/stoa": "^0.5",
-                "phalanx/stream": "^0.5",
-                "php": "^8.4"
-            },
-            "suggest": {
-                "phalanx/ai": "For agent streaming to frontend",
-                "phalanx/ws-server": "For WebSocket signal transport"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-main": "0.5-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Phalanx\\Ui\\": "src/"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Phalanx\\Tests\\Ui\\": "tests/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jonathan Havens",
-                    "email": "mail@phalanx-php.com"
-                }
-            ],
-            "description": "Frontend bridge for Phalanx — typed route contracts, OpenAPI generation, Kubb integration, and signal-based reactivity",
-            "homepage": "https://github.com/phalanx-php/phalanx-eidolon",
-            "keywords": [
-                "async",
-                "frontend",
-                "kubb",
-                "openapi",
-                "react",
-                "reactphp",
-                "signals",
-                "ssr",
-                "tanstack"
-            ],
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
-            "name": "psr/http-message",
-            "version": "1.1",
+            "name": "psr/container",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/php-fig/http-message.git",
-                "reference": "cb6ce4845ce34a8ad9e68117c10ee90a29919eba"
+                "url": "https://github.com/php-fig/container.git",
+                "reference": "c71ecc56dfe541dbd90c5360474fbc405f8d5963"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-message/zipball/cb6ce4845ce34a8ad9e68117c10ee90a29919eba",
-                "reference": "cb6ce4845ce34a8ad9e68117c10ee90a29919eba",
+                "url": "https://api.github.com/repos/php-fig/container/zipball/c71ecc56dfe541dbd90c5360474fbc405f8d5963",
+                "reference": "c71ecc56dfe541dbd90c5360474fbc405f8d5963",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.2 || ^8.0"
+                "php": ">=7.4.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1.x-dev"
+                    "dev-master": "2.0.x-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Psr\\Http\\Message\\": "src/"
+                    "Psr\\Container\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -477,23 +616,23 @@
             "authors": [
                 {
                     "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
+                    "homepage": "https://www.php-fig.org/"
                 }
             ],
-            "description": "Common interface for HTTP messages",
-            "homepage": "https://github.com/php-fig/http-message",
+            "description": "Common Container Interface (PHP FIG PSR-11)",
+            "homepage": "https://github.com/php-fig/container",
             "keywords": [
-                "http",
-                "http-message",
-                "psr",
-                "psr-7",
-                "request",
-                "response"
+                "PSR-11",
+                "container",
+                "container-interface",
+                "container-interop",
+                "psr"
             ],
             "support": {
-                "source": "https://github.com/php-fig/http-message/tree/1.1"
+                "issues": "https://github.com/php-fig/container/issues",
+                "source": "https://github.com/php-fig/container/tree/2.0.2"
             },
-            "time": "2023-04-04T09:50:52+00:00"
+            "time": "2021-11-05T16:47:00+00:00"
         },
         {
             "name": "psr/simple-cache",
@@ -547,36 +686,136 @@
             "time": "2021-10-29T13:26:27+00:00"
         },
         {
-            "name": "react/async",
-            "version": "v4.3.0",
+            "name": "symfony/console",
+            "version": "v8.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/reactphp/async.git",
-                "reference": "635d50e30844a484495713e8cb8d9e079c0008a5"
+                "url": "https://github.com/symfony/console.git",
+                "reference": "f5a856c6ecb56b3c21ed94a5b7bf940d857d110a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/async/zipball/635d50e30844a484495713e8cb8d9e079c0008a5",
-                "reference": "635d50e30844a484495713e8cb8d9e079c0008a5",
+                "url": "https://api.github.com/repos/symfony/console/zipball/f5a856c6ecb56b3c21ed94a5b7bf940d857d110a",
+                "reference": "f5a856c6ecb56b3c21ed94a5b7bf940d857d110a",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1",
-                "react/event-loop": "^1.2",
-                "react/promise": "^3.2 || ^2.8 || ^1.2.1"
+                "php": ">=8.4.1",
+                "symfony/deprecation-contracts": "^2.5|^3",
+                "symfony/polyfill-mbstring": "^1.0",
+                "symfony/polyfill-php85": "^1.32",
+                "symfony/service-contracts": "^2.5|^3",
+                "symfony/string": "^7.4.6|^8.0.6"
+            },
+            "conflict": {
+                "symfony/dependency-injection": "<8.1",
+                "symfony/event-dispatcher": "<8.1"
+            },
+            "provide": {
+                "psr/log-implementation": "1.0|2.0|3.0"
             },
             "require-dev": {
-                "phpstan/phpstan": "1.10.39",
-                "phpunit/phpunit": "^9.6"
+                "psr/log": "^1|^2|^3",
+                "symfony/config": "^7.4|^8.0",
+                "symfony/dependency-injection": "^8.1",
+                "symfony/event-dispatcher": "^8.1",
+                "symfony/filesystem": "^7.4|^8.0",
+                "symfony/http-foundation": "^7.4|^8.0",
+                "symfony/http-kernel": "^7.4|^8.0",
+                "symfony/lock": "^7.4|^8.0",
+                "symfony/messenger": "^7.4|^8.0",
+                "symfony/mime": "^7.4|^8.0",
+                "symfony/process": "^7.4|^8.0",
+                "symfony/stopwatch": "^7.4|^8.0",
+                "symfony/uid": "^7.4|^8.0",
+                "symfony/validator": "^7.4|^8.0",
+                "symfony/var-dumper": "^7.4|^8.0"
             },
             "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Console\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Eases the creation of beautiful and testable command line interfaces",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "cli",
+                "command-line",
+                "console",
+                "terminal"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/console/tree/v8.1.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2026-05-29T05:06:50+00:00"
+        },
+        {
+            "name": "symfony/deprecation-contracts",
+            "version": "v3.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/deprecation-contracts.git",
+                "reference": "50f59d1f3ca46d41ac911f97a78626b6756af35b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/50f59d1f3ca46d41ac911f97a78626b6756af35b",
+                "reference": "50f59d1f3ca46d41ac911f97a78626b6756af35b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "type": "library",
+            "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
+                "branch-alias": {
+                    "dev-main": "3.7-dev"
+                }
+            },
             "autoload": {
                 "files": [
-                    "src/functions_include.php"
-                ],
-                "psr-4": {
-                    "React\\Async\\": "src/"
-                }
+                    "function.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -584,69 +823,68 @@
             ],
             "authors": [
                 {
-                    "name": "Christian Lück",
-                    "email": "christian@clue.engineering",
-                    "homepage": "https://clue.engineering/"
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
                 },
                 {
-                    "name": "Cees-Jan Kiewiet",
-                    "email": "reactphp@ceesjankiewiet.nl",
-                    "homepage": "https://wyrihaximus.net/"
-                },
-                {
-                    "name": "Jan Sorgalla",
-                    "email": "jsorgalla@gmail.com",
-                    "homepage": "https://sorgalla.com/"
-                },
-                {
-                    "name": "Chris Boden",
-                    "email": "cboden@gmail.com",
-                    "homepage": "https://cboden.dev/"
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
                 }
             ],
-            "description": "Async utilities and fibers for ReactPHP",
-            "keywords": [
-                "async",
-                "reactphp"
-            ],
+            "description": "A generic function and convention to trigger deprecation notices",
+            "homepage": "https://symfony.com",
             "support": {
-                "issues": "https://github.com/reactphp/async/issues",
-                "source": "https://github.com/reactphp/async/tree/v4.3.0"
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.7.0"
             },
             "funding": [
                 {
-                    "url": "https://opencollective.com/reactphp",
-                    "type": "open_collective"
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
                 }
             ],
-            "time": "2024-06-04T14:40:02+00:00"
+            "time": "2026-04-13T15:52:40+00:00"
         },
         {
-            "name": "react/cache",
-            "version": "v1.2.0",
+            "name": "symfony/dotenv",
+            "version": "v8.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/reactphp/cache.git",
-                "reference": "d47c472b64aa5608225f47965a484b75c7817d5b"
+                "url": "https://github.com/symfony/dotenv.git",
+                "reference": "7ed4e3a11e3c98235c70ded047d7ddf9e6ae854c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/cache/zipball/d47c472b64aa5608225f47965a484b75c7817d5b",
-                "reference": "d47c472b64aa5608225f47965a484b75c7817d5b",
+                "url": "https://api.github.com/repos/symfony/dotenv/zipball/7ed4e3a11e3c98235c70ded047d7ddf9e6ae854c",
+                "reference": "7ed4e3a11e3c98235c70ded047d7ddf9e6ae854c",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0",
-                "react/promise": "^3.0 || ^2.0 || ^1.1"
+                "php": ">=8.4.1"
             },
             "require-dev": {
-                "phpunit/phpunit": "^9.5 || ^5.7 || ^4.8.35"
+                "symfony/console": "^7.4|^8.0",
+                "symfony/process": "^7.4|^8.0"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "React\\Cache\\": "src/"
-                }
+                    "Symfony\\Component\\Dotenv\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -654,393 +892,80 @@
             ],
             "authors": [
                 {
-                    "name": "Christian Lück",
-                    "email": "christian@clue.engineering",
-                    "homepage": "https://clue.engineering/"
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 },
                 {
-                    "name": "Cees-Jan Kiewiet",
-                    "email": "reactphp@ceesjankiewiet.nl",
-                    "homepage": "https://wyrihaximus.net/"
-                },
-                {
-                    "name": "Jan Sorgalla",
-                    "email": "jsorgalla@gmail.com",
-                    "homepage": "https://sorgalla.com/"
-                },
-                {
-                    "name": "Chris Boden",
-                    "email": "cboden@gmail.com",
-                    "homepage": "https://cboden.dev/"
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
                 }
             ],
-            "description": "Async, Promise-based cache interface for ReactPHP",
+            "description": "Registers environment variables from a .env file",
+            "homepage": "https://symfony.com",
             "keywords": [
-                "cache",
-                "caching",
-                "promise",
-                "reactphp"
+                "dotenv",
+                "env",
+                "environment"
             ],
             "support": {
-                "issues": "https://github.com/reactphp/cache/issues",
-                "source": "https://github.com/reactphp/cache/tree/v1.2.0"
+                "source": "https://github.com/symfony/dotenv/tree/v8.1.0"
             },
             "funding": [
                 {
-                    "url": "https://opencollective.com/reactphp",
-                    "type": "open_collective"
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
                 }
             ],
-            "time": "2022-11-30T15:59:55+00:00"
+            "time": "2026-05-29T05:06:50+00:00"
         },
         {
-            "name": "react/datagram",
-            "version": "v1.10.0",
+            "name": "symfony/polyfill-ctype",
+            "version": "v1.37.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/reactphp/datagram.git",
-                "reference": "9236e1f5a67a6029be17d551e9858c487836c301"
+                "url": "https://github.com/symfony/polyfill-ctype.git",
+                "reference": "141046a8f9477948ff284fa65be2095baafb94f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/datagram/zipball/9236e1f5a67a6029be17d551e9858c487836c301",
-                "reference": "9236e1f5a67a6029be17d551e9858c487836c301",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/141046a8f9477948ff284fa65be2095baafb94f2",
+                "reference": "141046a8f9477948ff284fa65be2095baafb94f2",
                 "shasum": ""
             },
             "require": {
-                "evenement/evenement": "^3.0 || ^2.0 || ^1.0",
-                "php": ">=5.3",
-                "react/dns": "^1.13",
-                "react/event-loop": "^1.2",
-                "react/promise": "^3.2 || ^2.1 || ^1.2"
+                "php": ">=7.2"
             },
-            "require-dev": {
-                "phpunit/phpunit": "^9.6 || ^5.7 || ^4.8.36",
-                "react/async": "^4.3 || ^3 || ^2"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "React\\Datagram\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Christian Lück",
-                    "email": "christian@clue.engineering",
-                    "homepage": "https://clue.engineering/"
-                },
-                {
-                    "name": "Cees-Jan Kiewiet",
-                    "email": "reactphp@ceesjankiewiet.nl",
-                    "homepage": "https://wyrihaximus.net/"
-                },
-                {
-                    "name": "Jan Sorgalla",
-                    "email": "jsorgalla@gmail.com",
-                    "homepage": "https://sorgalla.com/"
-                },
-                {
-                    "name": "Chris Boden",
-                    "email": "cboden@gmail.com",
-                    "homepage": "https://cboden.dev/"
-                }
-            ],
-            "description": "Event-driven UDP datagram socket client and server for ReactPHP",
-            "homepage": "https://github.com/reactphp/datagram",
-            "keywords": [
-                "Socket",
-                "async",
-                "client",
-                "datagram",
-                "dgram",
-                "reactphp",
-                "server",
-                "udp"
-            ],
-            "support": {
-                "issues": "https://github.com/reactphp/datagram/issues",
-                "source": "https://github.com/reactphp/datagram/tree/v1.10.0"
-            },
-            "funding": [
-                {
-                    "url": "https://opencollective.com/reactphp",
-                    "type": "open_collective"
-                }
-            ],
-            "time": "2024-09-06T11:22:35+00:00"
-        },
-        {
-            "name": "react/dns",
-            "version": "v1.14.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/reactphp/dns.git",
-                "reference": "7562c05391f42701c1fccf189c8225fece1cd7c3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/dns/zipball/7562c05391f42701c1fccf189c8225fece1cd7c3",
-                "reference": "7562c05391f42701c1fccf189c8225fece1cd7c3",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0",
-                "react/cache": "^1.0 || ^0.6 || ^0.5",
-                "react/event-loop": "^1.2",
-                "react/promise": "^3.2 || ^2.7 || ^1.2.1"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^9.6 || ^5.7 || ^4.8.36",
-                "react/async": "^4.3 || ^3 || ^2",
-                "react/promise-timer": "^1.11"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "React\\Dns\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Christian Lück",
-                    "email": "christian@clue.engineering",
-                    "homepage": "https://clue.engineering/"
-                },
-                {
-                    "name": "Cees-Jan Kiewiet",
-                    "email": "reactphp@ceesjankiewiet.nl",
-                    "homepage": "https://wyrihaximus.net/"
-                },
-                {
-                    "name": "Jan Sorgalla",
-                    "email": "jsorgalla@gmail.com",
-                    "homepage": "https://sorgalla.com/"
-                },
-                {
-                    "name": "Chris Boden",
-                    "email": "cboden@gmail.com",
-                    "homepage": "https://cboden.dev/"
-                }
-            ],
-            "description": "Async DNS resolver for ReactPHP",
-            "keywords": [
-                "async",
-                "dns",
-                "dns-resolver",
-                "reactphp"
-            ],
-            "support": {
-                "issues": "https://github.com/reactphp/dns/issues",
-                "source": "https://github.com/reactphp/dns/tree/v1.14.0"
-            },
-            "funding": [
-                {
-                    "url": "https://opencollective.com/reactphp",
-                    "type": "open_collective"
-                }
-            ],
-            "time": "2025-11-18T19:34:28+00:00"
-        },
-        {
-            "name": "react/event-loop",
-            "version": "v1.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/reactphp/event-loop.git",
-                "reference": "ba276bda6083df7e0050fd9b33f66ad7a4ac747a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/event-loop/zipball/ba276bda6083df7e0050fd9b33f66ad7a4ac747a",
-                "reference": "ba276bda6083df7e0050fd9b33f66ad7a4ac747a",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^9.6 || ^5.7 || ^4.8.36"
+            "provide": {
+                "ext-ctype": "*"
             },
             "suggest": {
-                "ext-pcntl": "For signal handling support when using the StreamSelectLoop"
+                "ext-ctype": "For best performance"
             },
             "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "React\\EventLoop\\": "src/"
+            "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Christian Lück",
-                    "email": "christian@clue.engineering",
-                    "homepage": "https://clue.engineering/"
-                },
-                {
-                    "name": "Cees-Jan Kiewiet",
-                    "email": "reactphp@ceesjankiewiet.nl",
-                    "homepage": "https://wyrihaximus.net/"
-                },
-                {
-                    "name": "Jan Sorgalla",
-                    "email": "jsorgalla@gmail.com",
-                    "homepage": "https://sorgalla.com/"
-                },
-                {
-                    "name": "Chris Boden",
-                    "email": "cboden@gmail.com",
-                    "homepage": "https://cboden.dev/"
-                }
-            ],
-            "description": "ReactPHP's core reactor event loop that libraries can use for evented I/O.",
-            "keywords": [
-                "asynchronous",
-                "event-loop"
-            ],
-            "support": {
-                "issues": "https://github.com/reactphp/event-loop/issues",
-                "source": "https://github.com/reactphp/event-loop/tree/v1.6.0"
-            },
-            "funding": [
-                {
-                    "url": "https://opencollective.com/reactphp",
-                    "type": "open_collective"
-                }
-            ],
-            "time": "2025-11-17T20:46:25+00:00"
-        },
-        {
-            "name": "react/http",
-            "version": "v1.11.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/reactphp/http.git",
-                "reference": "8db02de41dcca82037367f67a2d4be365b1c4db9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/http/zipball/8db02de41dcca82037367f67a2d4be365b1c4db9",
-                "reference": "8db02de41dcca82037367f67a2d4be365b1c4db9",
-                "shasum": ""
-            },
-            "require": {
-                "evenement/evenement": "^3.0 || ^2.0 || ^1.0",
-                "fig/http-message-util": "^1.1",
-                "php": ">=5.3.0",
-                "psr/http-message": "^1.0",
-                "react/event-loop": "^1.2",
-                "react/promise": "^3.2 || ^2.3 || ^1.2.1",
-                "react/socket": "^1.16",
-                "react/stream": "^1.4"
-            },
-            "require-dev": {
-                "clue/http-proxy-react": "^1.8",
-                "clue/reactphp-ssh-proxy": "^1.4",
-                "clue/socks-react": "^1.4",
-                "phpunit/phpunit": "^9.6 || ^5.7 || ^4.8.36",
-                "react/async": "^4.2 || ^3 || ^2",
-                "react/promise-stream": "^1.4",
-                "react/promise-timer": "^1.11"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "React\\Http\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Christian Lück",
-                    "email": "christian@clue.engineering",
-                    "homepage": "https://clue.engineering/"
-                },
-                {
-                    "name": "Cees-Jan Kiewiet",
-                    "email": "reactphp@ceesjankiewiet.nl",
-                    "homepage": "https://wyrihaximus.net/"
-                },
-                {
-                    "name": "Jan Sorgalla",
-                    "email": "jsorgalla@gmail.com",
-                    "homepage": "https://sorgalla.com/"
-                },
-                {
-                    "name": "Chris Boden",
-                    "email": "cboden@gmail.com",
-                    "homepage": "https://cboden.dev/"
-                }
-            ],
-            "description": "Event-driven, streaming HTTP client and server implementation for ReactPHP",
-            "keywords": [
-                "async",
-                "client",
-                "event-driven",
-                "http",
-                "http client",
-                "http server",
-                "https",
-                "psr-7",
-                "reactphp",
-                "server",
-                "streaming"
-            ],
-            "support": {
-                "issues": "https://github.com/reactphp/http/issues",
-                "source": "https://github.com/reactphp/http/tree/v1.11.0"
-            },
-            "funding": [
-                {
-                    "url": "https://opencollective.com/reactphp",
-                    "type": "open_collective"
-                }
-            ],
-            "time": "2024-11-20T15:24:08+00:00"
-        },
-        {
-            "name": "react/promise",
-            "version": "v3.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/reactphp/promise.git",
-                "reference": "23444f53a813a3296c1368bb104793ce8d88f04a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/promise/zipball/23444f53a813a3296c1368bb104793ce8d88f04a",
-                "reference": "23444f53a813a3296c1368bb104793ce8d88f04a",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.1.0"
-            },
-            "require-dev": {
-                "phpstan/phpstan": "1.12.28 || 1.4.10",
-                "phpunit/phpunit": "^9.6 || ^7.5"
-            },
-            "type": "library",
             "autoload": {
                 "files": [
-                    "src/functions_include.php"
+                    "bootstrap.php"
                 ],
                 "psr-4": {
-                    "React\\Promise\\": "src/"
+                    "Symfony\\Polyfill\\Ctype\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1049,76 +974,485 @@
             ],
             "authors": [
                 {
-                    "name": "Jan Sorgalla",
-                    "email": "jsorgalla@gmail.com",
-                    "homepage": "https://sorgalla.com/"
+                    "name": "Gert de Pagter",
+                    "email": "BackEndTea@gmail.com"
                 },
                 {
-                    "name": "Christian Lück",
-                    "email": "christian@clue.engineering",
-                    "homepage": "https://clue.engineering/"
-                },
-                {
-                    "name": "Cees-Jan Kiewiet",
-                    "email": "reactphp@ceesjankiewiet.nl",
-                    "homepage": "https://wyrihaximus.net/"
-                },
-                {
-                    "name": "Chris Boden",
-                    "email": "cboden@gmail.com",
-                    "homepage": "https://cboden.dev/"
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
                 }
             ],
-            "description": "A lightweight implementation of CommonJS Promises/A for PHP",
+            "description": "Symfony polyfill for ctype functions",
+            "homepage": "https://symfony.com",
             "keywords": [
-                "promise",
-                "promises"
+                "compatibility",
+                "ctype",
+                "polyfill",
+                "portable"
             ],
             "support": {
-                "issues": "https://github.com/reactphp/promise/issues",
-                "source": "https://github.com/reactphp/promise/tree/v3.3.0"
+                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.37.0"
             },
             "funding": [
                 {
-                    "url": "https://opencollective.com/reactphp",
-                    "type": "open_collective"
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
                 }
             ],
-            "time": "2025-08-19T18:57:03+00:00"
+            "time": "2026-04-10T16:19:22+00:00"
         },
         {
-            "name": "react/socket",
-            "version": "v1.17.0",
+            "name": "symfony/polyfill-intl-grapheme",
+            "version": "v1.38.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/reactphp/socket.git",
-                "reference": "ef5b17b81f6f60504c539313f94f2d826c5faa08"
+                "url": "https://github.com/symfony/polyfill-intl-grapheme.git",
+                "reference": "e9247d281d694a5120554d9afaf54e070e88a603"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/socket/zipball/ef5b17b81f6f60504c539313f94f2d826c5faa08",
-                "reference": "ef5b17b81f6f60504c539313f94f2d826c5faa08",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-grapheme/zipball/e9247d281d694a5120554d9afaf54e070e88a603",
+                "reference": "e9247d281d694a5120554d9afaf54e070e88a603",
                 "shasum": ""
             },
             "require": {
-                "evenement/evenement": "^3.0 || ^2.0 || ^1.0",
-                "php": ">=5.3.0",
-                "react/dns": "^1.13",
-                "react/event-loop": "^1.2",
-                "react/promise": "^3.2 || ^2.6 || ^1.2.1",
-                "react/stream": "^1.4"
+                "php": ">=7.2"
             },
-            "require-dev": {
-                "phpunit/phpunit": "^9.6 || ^5.7 || ^4.8.36",
-                "react/async": "^4.3 || ^3.3 || ^2",
-                "react/promise-stream": "^1.4",
-                "react/promise-timer": "^1.11"
+            "suggest": {
+                "ext-intl": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Grapheme\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for intl's grapheme_* functions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "grapheme",
+                "intl",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-intl-grapheme/tree/v1.38.1"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2026-05-26T05:58:03+00:00"
+        },
+        {
+            "name": "symfony/polyfill-intl-normalizer",
+            "version": "v1.38.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-intl-normalizer.git",
+                "reference": "2d446c214bdbe5b71bde5011b060a05fece3ae6b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-normalizer/zipball/2d446c214bdbe5b71bde5011b060a05fece3ae6b",
+                "reference": "2d446c214bdbe5b71bde5011b060a05fece3ae6b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "suggest": {
+                "ext-intl": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Normalizer\\": ""
+                },
+                "classmap": [
+                    "Resources/stubs"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for intl's Normalizer class and related functions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "intl",
+                "normalizer",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-intl-normalizer/tree/v1.38.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2026-05-25T13:48:31+00:00"
+        },
+        {
+            "name": "symfony/polyfill-mbstring",
+            "version": "v1.38.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-mbstring.git",
+                "reference": "14c5439eec4ccff081ac14eca2dc57feb2a66d92"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/14c5439eec4ccff081ac14eca2dc57feb2a66d92",
+                "reference": "14c5439eec4ccff081ac14eca2dc57feb2a66d92",
+                "shasum": ""
+            },
+            "require": {
+                "ext-iconv": "*",
+                "php": ">=7.2"
+            },
+            "provide": {
+                "ext-mbstring": "*"
+            },
+            "suggest": {
+                "ext-mbstring": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for the Mbstring extension",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "mbstring",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.38.1"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2026-05-26T12:51:13+00:00"
+        },
+        {
+            "name": "symfony/polyfill-php85",
+            "version": "v1.38.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php85.git",
+                "reference": "ba2ba04f3352cfa2dcbbcb90aee13ed967f505b1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php85/zipball/ba2ba04f3352cfa2dcbbcb90aee13ed967f505b1",
+                "reference": "ba2ba04f3352cfa2dcbbcb90aee13ed967f505b1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "type": "library",
+            "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php85\\": ""
+                },
+                "classmap": [
+                    "Resources/stubs"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 8.5+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php85/tree/v1.38.1"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2026-05-26T02:25:22+00:00"
+        },
+        {
+            "name": "symfony/polyfill-uuid",
+            "version": "v1.37.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-uuid.git",
+                "reference": "26dfec253c4cf3e51b541b52ddf7e42cb0908e94"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-uuid/zipball/26dfec253c4cf3e51b541b52ddf7e42cb0908e94",
+                "reference": "26dfec253c4cf3e51b541b52ddf7e42cb0908e94",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "provide": {
+                "ext-uuid": "*"
+            },
+            "suggest": {
+                "ext-uuid": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Uuid\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Grégoire Pineau",
+                    "email": "lyrixx@lyrixx.info"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for uuid functions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "uuid"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-uuid/tree/v1.37.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2026-04-10T16:19:22+00:00"
+        },
+        {
+            "name": "symfony/process",
+            "version": "v8.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/process.git",
+                "reference": "c4a9e58f235a6bf7f97ffbfedae2687353ac79e5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/process/zipball/c4a9e58f235a6bf7f97ffbfedae2687353ac79e5",
+                "reference": "c4a9e58f235a6bf7f97ffbfedae2687353ac79e5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.4.1"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "React\\Socket\\": "src/"
-                }
+                    "Symfony\\Component\\Process\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1126,136 +1460,51 @@
             ],
             "authors": [
                 {
-                    "name": "Christian Lück",
-                    "email": "christian@clue.engineering",
-                    "homepage": "https://clue.engineering/"
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 },
                 {
-                    "name": "Cees-Jan Kiewiet",
-                    "email": "reactphp@ceesjankiewiet.nl",
-                    "homepage": "https://wyrihaximus.net/"
-                },
-                {
-                    "name": "Jan Sorgalla",
-                    "email": "jsorgalla@gmail.com",
-                    "homepage": "https://sorgalla.com/"
-                },
-                {
-                    "name": "Chris Boden",
-                    "email": "cboden@gmail.com",
-                    "homepage": "https://cboden.dev/"
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
                 }
             ],
-            "description": "Async, streaming plaintext TCP/IP and secure TLS socket server and client connections for ReactPHP",
-            "keywords": [
-                "Connection",
-                "Socket",
-                "async",
-                "reactphp",
-                "stream"
-            ],
+            "description": "Executes commands in sub-processes",
+            "homepage": "https://symfony.com",
             "support": {
-                "issues": "https://github.com/reactphp/socket/issues",
-                "source": "https://github.com/reactphp/socket/tree/v1.17.0"
+                "source": "https://github.com/symfony/process/tree/v8.1.0"
             },
             "funding": [
                 {
-                    "url": "https://opencollective.com/reactphp",
-                    "type": "open_collective"
-                }
-            ],
-            "time": "2025-11-19T20:47:34+00:00"
-        },
-        {
-            "name": "react/stream",
-            "version": "v1.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/reactphp/stream.git",
-                "reference": "1e5b0acb8fe55143b5b426817155190eb6f5b18d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/stream/zipball/1e5b0acb8fe55143b5b426817155190eb6f5b18d",
-                "reference": "1e5b0acb8fe55143b5b426817155190eb6f5b18d",
-                "shasum": ""
-            },
-            "require": {
-                "evenement/evenement": "^3.0 || ^2.0 || ^1.0",
-                "php": ">=5.3.8",
-                "react/event-loop": "^1.2"
-            },
-            "require-dev": {
-                "clue/stream-filter": "~1.2",
-                "phpunit/phpunit": "^9.6 || ^5.7 || ^4.8.36"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "React\\Stream\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Christian Lück",
-                    "email": "christian@clue.engineering",
-                    "homepage": "https://clue.engineering/"
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
                 },
                 {
-                    "name": "Cees-Jan Kiewiet",
-                    "email": "reactphp@ceesjankiewiet.nl",
-                    "homepage": "https://wyrihaximus.net/"
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
                 },
                 {
-                    "name": "Jan Sorgalla",
-                    "email": "jsorgalla@gmail.com",
-                    "homepage": "https://sorgalla.com/"
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
                 },
                 {
-                    "name": "Chris Boden",
-                    "email": "cboden@gmail.com",
-                    "homepage": "https://cboden.dev/"
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
                 }
             ],
-            "description": "Event-driven readable and writable streams for non-blocking I/O in ReactPHP",
-            "keywords": [
-                "event-driven",
-                "io",
-                "non-blocking",
-                "pipe",
-                "reactphp",
-                "readable",
-                "stream",
-                "writable"
-            ],
-            "support": {
-                "issues": "https://github.com/reactphp/stream/issues",
-                "source": "https://github.com/reactphp/stream/tree/v1.4.0"
-            },
-            "funding": [
-                {
-                    "url": "https://opencollective.com/reactphp",
-                    "type": "open_collective"
-                }
-            ],
-            "time": "2024-06-11T12:45:25+00:00"
+            "time": "2026-05-29T05:06:50+00:00"
         },
         {
             "name": "symfony/runtime",
-            "version": "v7.4.8",
+            "version": "v7.4.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/runtime.git",
-                "reference": "6d792a64fec1eae2f011cfe9ab5978a9eab3071e"
+                "reference": "1a24cf8aab3a9378117718b35525c4126ad3adec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/runtime/zipball/6d792a64fec1eae2f011cfe9ab5978a9eab3071e",
-                "reference": "6d792a64fec1eae2f011cfe9ab5978a9eab3071e",
+                "url": "https://api.github.com/repos/symfony/runtime/zipball/1a24cf8aab3a9378117718b35525c4126ad3adec",
+                "reference": "1a24cf8aab3a9378117718b35525c4126ad3adec",
                 "shasum": ""
             },
             "require": {
@@ -1268,6 +1517,7 @@
             "require-dev": {
                 "composer/composer": "^2.6",
                 "symfony/console": "^6.4|^7.0|^8.0",
+                "symfony/dependency-injection": "^6.4|^7.0|^8.0",
                 "symfony/dotenv": "^6.4|^7.0|^8.0",
                 "symfony/http-foundation": "^6.4|^7.0|^8.0",
                 "symfony/http-kernel": "^6.4|^7.0|^8.0"
@@ -1305,7 +1555,7 @@
                 "runtime"
             ],
             "support": {
-                "source": "https://github.com/symfony/runtime/tree/v7.4.8"
+                "source": "https://github.com/symfony/runtime/tree/v7.4.13"
             },
             "funding": [
                 {
@@ -1325,16 +1575,345 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-03-24T13:12:05+00:00"
+            "time": "2026-05-23T18:04:28+00:00"
+        },
+        {
+            "name": "symfony/service-contracts",
+            "version": "v3.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/service-contracts.git",
+                "reference": "d25d82433a80eba6aa0e6c24b61d7370d99e444a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/d25d82433a80eba6aa0e6c24b61d7370d99e444a",
+                "reference": "d25d82433a80eba6aa0e6c24b61d7370d99e444a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "psr/container": "^1.1|^2.0",
+                "symfony/deprecation-contracts": "^2.5|^3"
+            },
+            "conflict": {
+                "ext-psr": "<1.1|>=2"
+            },
+            "type": "library",
+            "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
+                "branch-alias": {
+                    "dev-main": "3.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Contracts\\Service\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Test/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Generic abstractions related to writing services",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "abstractions",
+                "contracts",
+                "decoupling",
+                "interfaces",
+                "interoperability",
+                "standards"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/service-contracts/tree/v3.7.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2026-03-28T09:44:51+00:00"
+        },
+        {
+            "name": "symfony/string",
+            "version": "v8.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/string.git",
+                "reference": "afd5944f4005862d961efb85c8bbd5c523c4e3c9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/string/zipball/afd5944f4005862d961efb85c8bbd5c523c4e3c9",
+                "reference": "afd5944f4005862d961efb85c8bbd5c523c4e3c9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.4.1",
+                "symfony/polyfill-ctype": "^1.8",
+                "symfony/polyfill-intl-grapheme": "^1.33",
+                "symfony/polyfill-intl-normalizer": "^1.0",
+                "symfony/polyfill-mbstring": "^1.0"
+            },
+            "conflict": {
+                "symfony/translation-contracts": "<2.5"
+            },
+            "require-dev": {
+                "symfony/emoji": "^7.4|^8.0",
+                "symfony/http-client": "^7.4|^8.0",
+                "symfony/intl": "^7.4|^8.0",
+                "symfony/translation-contracts": "^2.5|^3.0",
+                "symfony/var-exporter": "^7.4|^8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "Resources/functions.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Component\\String\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides an object-oriented API to strings and deals with bytes, UTF-8 code points and grapheme clusters in a unified way",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "grapheme",
+                "i18n",
+                "string",
+                "unicode",
+                "utf-8",
+                "utf8"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/string/tree/v8.1.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2026-05-29T05:06:50+00:00"
+        },
+        {
+            "name": "symfony/uid",
+            "version": "v8.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/uid.git",
+                "reference": "7393f157a55f7e70a4de0334435c55a5a8fe749a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/uid/zipball/7393f157a55f7e70a4de0334435c55a5a8fe749a",
+                "reference": "7393f157a55f7e70a4de0334435c55a5a8fe749a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.4.1",
+                "symfony/polyfill-uuid": "^1.15"
+            },
+            "require-dev": {
+                "symfony/console": "^7.4|^8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Uid\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Grégoire Pineau",
+                    "email": "lyrixx@lyrixx.info"
+                },
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides an object-oriented API to generate and represent UIDs",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "UID",
+                "ulid",
+                "uuid"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/uid/tree/v8.1.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2026-05-29T05:06:50+00:00"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "v8.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "efb42bd2c6f4f3ccfd4683583449938b5fc146b0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/efb42bd2c6f4f3ccfd4683583449938b5fc146b0",
+                "reference": "efb42bd2c6f4f3ccfd4683583449938b5fc146b0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.4.1",
+                "symfony/polyfill-ctype": "^1.8"
+            },
+            "conflict": {
+                "symfony/console": "<7.4"
+            },
+            "require-dev": {
+                "symfony/console": "^7.4|^8.0",
+                "yaml/yaml-test-suite": "*"
+            },
+            "bin": [
+                "Resources/bin/yaml-lint"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Yaml\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Loads and dumps YAML files",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/yaml/tree/v8.1.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2026-05-29T05:06:50+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "phalanx/aegis": 20,
-        "phalanx/stoa": 20,
-        "phalanx/eidolon": 20
+        "phalanx-php/phalanx": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
