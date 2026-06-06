@@ -11,7 +11,6 @@ function LandingPage() {
         <img src="/assets/logos/banner.svg" alt="Phalanx" className="w-auto h-16 sm:h-20 mb-2" />
         <p className="max-w-lg text-center text-sm leading-relaxed text-phx-text-muted">
           Supervised execution framework for modern PHP.
-          Phalanx 0.2.0-alpha.1 is now available! Managed runtime primitives and libraries for servers, agents, streams, and infrastructure.
         </p>
 
         <div className="mt-12 font-mono text-lg text-phx-text">
