@@ -4,15 +4,15 @@ declare(strict_types=1);
 
 namespace Phalanx\Site\Handler;
 
-use Phalanx\Scope;
+use GuzzleHttp\Psr7\Response;
+use Phalanx\Http\RequestContext;
 use Phalanx\Task\Scopeable;
-use React\Http\Message\Response;
 
 final class HomePage implements Scopeable
 {
     private static ?string $html = null;
 
-    public function __invoke(Scope $scope): Response
+    public function __invoke(RequestContext $ctx): Response
     {
         self::$html ??= file_get_contents(dirname(__DIR__, 2) . '/public/dist/index.html')
             ?: file_get_contents(dirname(__DIR__, 2) . '/public/index.html');

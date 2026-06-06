@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Phalanx\Site\Handler;
 
-use Phalanx\Scope;
+use GuzzleHttp\Psr7\Response;
+use Phalanx\Http\RequestContext;
 use Phalanx\Task\Scopeable;
-use React\Http\Message\Response;
 
 final class StaticFile implements Scopeable
 {
@@ -25,9 +25,9 @@ final class StaticFile implements Scopeable
         'html' => 'text/html',
     ];
 
-    public function __invoke(Scope $scope): Response
+    public function __invoke(RequestContext $ctx): Response
     {
-        $path = $scope->path();
+        $path = $ctx->path();
         $publicDir = dirname(__DIR__, 2) . '/public';
 
         $filePath = realpath($publicDir . '/dist' . $path)

@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace Phalanx\Site\Handler;
 
-use Phalanx\Scope;
+use GuzzleHttp\Psr7\Response;
+use Phalanx\Http\RequestContext;
 use Phalanx\Task\Scopeable;
-use React\Http\Message\Response;
 
 final class HealthCheck implements Scopeable
 {
-    public function __invoke(Scope $scope): Response
+    public function __invoke(RequestContext $ctx): Response
     {
-        return Response::json(['status' => 'ok']);
+        return new Response(200, ['Content-Type' => 'application/json'], '{"status":"ok"}');
     }
 }
