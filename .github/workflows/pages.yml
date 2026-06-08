@@ -50,6 +50,9 @@ jobs:
           PHALANX_SITE_BASE: /phalanx-site/
         run: bun run build
 
+      - name: Create Pages fallback
+        run: cp public/dist/index.html public/dist/404.html
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
