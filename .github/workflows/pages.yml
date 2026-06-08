@@ -36,9 +36,9 @@ jobs:
         working-directory: frontend
         run: bunx playwright install --with-deps chromium
 
-      - name: Check brand assets
+      - name: Generate brand assets
         working-directory: frontend
-        run: bun run brand:check
+        run: bun run brand:build
 
       - name: Typecheck frontend
         working-directory: frontend
