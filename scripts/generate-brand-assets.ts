@@ -14,6 +14,7 @@ const publicDir = path.resolve(import.meta.dir, '..', 'public')
 const logosDir = path.join(publicDir, 'assets', 'logos')
 const runtimeBase = 'assets/brand'
 const brandingRoute = '/branding?export=1'
+const monorepoAssetsDir = path.join(monorepoDir, 'assets')
 
 const checkMode = process.argv.includes('--check')
 
@@ -157,7 +158,7 @@ async function generateRoundedFavicons(captures: Map<string, Buffer>, writes: Ma
 }
 
 async function generateMarkFromSvg(writes: Map<string, Buffer>) {
-  const markSvgPath = path.join(monorepoDir, 'assets', 'mark.svg')
+  const markSvgPath = await resolveAssetPath('mark.svg')
   const svgText = await readFile(markSvgPath, 'utf8')
 
   const resvg = new Resvg(svgText, {
@@ -167,17 +168,20 @@ async function generateMarkFromSvg(writes: Map<string, Buffer>) {
   const rendered = resvg.render()
   const png500 = await sharp(rendered.asPng()).resize(500, 500, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } }).png().toBuffer()
 
-  writes.set(path.join(monorepoDir, 'assets', 'mark.png'), png500)
+  if (await exists(monorepoAssetsDir)) {
+    writes.set(path.join(monorepoAssetsDir, 'mark.png'), png500)
+  }
+
   writes.set(path.join(designKitDir, 'mark', 'mark-500.png'), png500)
 }
 
 async function buildLogosDirectory(captures: Map<string, Buffer>, writes: Map<string, Buffer>) {
-  const markSvgPath = path.join(monorepoDir, 'assets', 'mark.svg')
-  const bannerSvgPath = path.join(monorepoDir, 'assets', 'banner.svg')
+  const markSvgPath = await resolveAssetPath('mark.svg')
+  const bannerSvgPath = await resolveAssetPath('banner.svg')
 
   const markSvg = await readFile(markSvgPath)
   const bannerSvg = await readFile(bannerSvgPath)
-  const mark500 = writes.get(path.join(monorepoDir, 'assets', 'mark.png'))
+  const mark500 = writes.get(path.join(designKitDir, 'mark', 'mark-500.png'))
   if (!mark500) throw new Error('mark-500 not generated yet')
 
   writes.set(path.join(logosDir, 'mark.svg'), markSvg)
@@ -243,11 +247,14 @@ async function buildLogosDirectory(captures: Map<string, Buffer>, writes: Map<st
 }
 
 async function distributeToMonorepo(writes: Map<string, Buffer>) {
-  const mark500 = writes.get(path.join(monorepoDir, 'assets', 'mark.png'))
+  const mark500 = writes.get(path.join(designKitDir, 'mark', 'mark-500.png'))
   if (!mark500) return
 
   const packagesDir = path.join(monorepoDir, 'packages')
-  const bannerSvg = await readFile(path.join(monorepoDir, 'assets', 'banner.svg'))
+  const bannerSvgPath = path.join(monorepoAssetsDir, 'banner.svg')
+  if (!await exists(bannerSvgPath)) return
+
+  const bannerSvg = await readFile(bannerSvgPath)
 
   try {
     await stat(packagesDir)
@@ -269,6 +276,28 @@ async function distributeToMonorepo(writes: Map<string, Buffer>) {
       await writeFile(path.join(brandDir, 'banner.svg'), bannerSvg)
       await writeFile(path.join(brandDir, 'mark.png'), mark500)
     }
+  }
+}
+
+async function resolveAssetPath(fileName: 'banner.svg' | 'mark.svg') {
+  const candidates = [
+    path.join(monorepoAssetsDir, fileName),
+    path.join(logosDir, fileName),
+  ]
+
+  for (const candidate of candidates) {
+    if (await exists(candidate)) return candidate
+  }
+
+  throw new Error(`Missing brand source asset: ${fileName}`)
+}
+
+async function exists(filePath: string) {
+  try {
+    await stat(filePath)
+    return true
+  } catch {
+    return false
   }
 }
 
