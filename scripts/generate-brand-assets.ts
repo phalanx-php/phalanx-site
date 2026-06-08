@@ -123,7 +123,6 @@ async function main() {
     await buildLogosDirectory(captures, writes)
 
     await syncOutputs(writes)
-    await distributeToMonorepo(writes)
 
     if (checkMode) {
       console.log(`brand:check OK (${writes.size} files)`)
@@ -243,39 +242,6 @@ async function buildLogosDirectory(captures: Map<string, Buffer>, writes: Map<st
   if (ico16) {
     const ico = await import('png-to-ico').then(m => m.default([ico16]))
     writes.set(path.join(logosDir, 'favicon', 'favicon.ico'), ico)
-  }
-}
-
-async function distributeToMonorepo(writes: Map<string, Buffer>) {
-  const mark500 = writes.get(path.join(designKitDir, 'mark', 'mark-500.png'))
-  if (!mark500) return
-
-  const packagesDir = path.join(monorepoDir, 'packages')
-  const bannerSvgPath = path.join(monorepoAssetsDir, 'banner.svg')
-  if (!await exists(bannerSvgPath)) return
-
-  const bannerSvg = await readFile(bannerSvgPath)
-
-  try {
-    await stat(packagesDir)
-  } catch {
-    return
-  }
-
-  const packages = await import('node:fs/promises').then(fs => fs.readdir(packagesDir))
-  for (const pkg of packages) {
-    const brandDir = path.join(packagesDir, pkg, 'brand')
-    try {
-      await stat(brandDir)
-    } catch {
-      continue
-    }
-
-    await mkdir(brandDir, { recursive: true })
-    if (!checkMode) {
-      await writeFile(path.join(brandDir, 'banner.svg'), bannerSvg)
-      await writeFile(path.join(brandDir, 'mark.png'), mark500)
-    }
   }
 }
 
