@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 import { TanStackRouterVite } from '@tanstack/router-plugin/vite'
 
 export default defineConfig({
+  base: process.env.PHALANX_SITE_BASE ?? '/',
   plugins: [
     TanStackRouterVite({
       target: 'react',

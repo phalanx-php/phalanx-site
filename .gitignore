@@ -5,6 +5,9 @@
 # Explicit includes
 !.gitignore
 !README.md
+!.github/
+!.github/workflows/
+!.github/workflows/pages.yml
 
 # Dependencies
 /vendor/
