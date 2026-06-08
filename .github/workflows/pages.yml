@@ -51,7 +51,7 @@ jobs:
         run: bun run build
 
       - name: Create Pages fallback
-        run: cp public/dist/index.html public/dist/404.html
+        run: mkdir -p public/dist/branding && cp public/dist/index.html public/dist/404.html && cp public/dist/index.html public/dist/branding/index.html
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
